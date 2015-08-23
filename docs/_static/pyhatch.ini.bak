@@ -1,0 +1,10 @@
+#Initial_Frame = 1
+#Final_Frame = 10
+#Cyclic_Animation=1    
+Input_File_Name="tk_nosy.pov"
+
+Height=61
+Width=202    
+Antialias=1 
+Output_File_Type="N"       
+
