@@ -1,8 +1,16 @@
 
 
-.. image:: https://travis-ci.org/sonofeft/PyHatch.svg?branch=master
-    :target: https://travis-ci.org/sonofeft/PyHatch
+.. image:: https://img.shields.io/travis/sonofeft/PyHatch.svg
+        :target: https://travis-ci.org/sonofeft/PyHatch
 
+.. image:: https://img.shields.io/pypi/v/PyHatch.svg
+    :target: https://pypi.python.org/pypi/pyhatch
+        
+.. image:: https://img.shields.io/pypi/pyversions/PyHatch.svg
+    :target: https://wiki.python.org/moin/Python2orPython3
+
+.. image:: https://img.shields.io/pypi/l/PyHatch.svg
+    :target: https://pypi.python.org/pypi/pyhatch
 
 .. _internal_index:
 
@@ -14,6 +22,8 @@ PyHatch
 See the Code at: `<https://github.com/sonofeft/PyHatch>`_
 
 See the Docs at: `<http://pyhatch.readthedocs.org/en/latest/>`_
+
+See PyPI page at:`<https://pypi.python.org/pypi/pyhatch>`_
 
 
 PyHatch is intended to help technical programmers focus their python
