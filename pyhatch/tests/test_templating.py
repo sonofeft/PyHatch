@@ -96,10 +96,12 @@ class MyTest(unittest.TestCase):
 
     def test_get_simpleDesc_from_template(self):
         """Test Getting the MANIFEST.in file from templates subdirectory"""
-        D = {'simpleDesc_rst':'123', 'longDesc':'abcdefghijklmnop'}
+        D = {'simpleDesc_rst':'123', 'longDesc':'abcdefghijklmnop', 
+              'projName_lower':'myproject', 'github_user_name':'github_user_name',
+              'projName':'MyProject'  }
         s = get_file_template( template_dir, 'README.rst', D)
-        sout = '123\n\nabcdefghijklmnop'
-        self.assertEqual(s, sout)
+        
+        self.assertTrue( s.find('abcdefghijklmnop') >= 0 )
 
 
 

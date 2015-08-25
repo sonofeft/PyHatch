@@ -147,9 +147,11 @@ else:
     CONFIG.add_section('generalId')
     for gid in generalIdL:
         CONFIG.set('generalId', gid, '')
-        
-    with open(USER_DATA_CFG_FNAME, 'w') as configfile:
-        CONFIG.write( configfile )
+    try:
+        with open(USER_DATA_CFG_FNAME, 'w') as configfile:
+            CONFIG.write( configfile )
+    except:
+        pass
         
 DEV_STATUS_OPTIONS = (
     '1 - Planning',
@@ -309,9 +311,11 @@ class Hatch(object):
                 if getattr(self, gid, ''): # if has a value
                     CONFIG.set('generalId', gid, getattr(self, gid))
             
-            with open(USER_DATA_CFG_FNAME, 'w') as configfile:
-                CONFIG.write( configfile )
-                
+            try:
+                with open(USER_DATA_CFG_FNAME, 'w') as configfile:
+                    CONFIG.write( configfile )
+            except:
+                pass
             
             
             # get dataD dictionary to build file contents strings
