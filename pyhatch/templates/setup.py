@@ -14,6 +14,7 @@ This will execute the setup.py file and insure that its pip-specific commands ar
 
 """
 
+
 # Always prefer setuptools over distutils
 try:
     from setuptools import setup, find_packages
@@ -34,9 +35,13 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f2:
     requires = f2.read().strip().splitlines()
 
+target_file = path.join( here, '{{projName_lower}}','_version.py')
+exec( open( target_file ).read() )  # creates local __version__ variable
+
+
 setup(
     name='{{projName_lower}}',
-    version='{{version}}',  # METADATA_RESET:    version = '<<version>>',
+    version = __version__,  # METADATA_RESET:    version = '<<version>>',
 
     description = '{{simpleDesc}}',
     long_description = long_description,

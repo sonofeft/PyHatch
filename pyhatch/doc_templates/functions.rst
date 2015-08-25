@@ -1,8 +1,7 @@
 
 .. functions
 
-Code Functions
-==============
+{{projCode_rst}}
 
 .. automodule:: {{projName_lower}}.{{mainPyFilePrefix}}
    :members:

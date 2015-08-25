@@ -74,6 +74,9 @@ if errorlevel 9009 (
 
 
 if "%1" == "html" (
+    echo.
+    echo       Running Command
+	echo %SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%/html
 	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
@@ -128,9 +131,9 @@ if "%1" == "qthelp" (
 	echo.
 	echo.Build finished; now you can run "qcollectiongenerator" with the ^
 .qhcp project file in %BUILDDIR%/qthelp, like this:
-	echo.^> qcollectiongenerator %BUILDDIR%\qthelp\{{projName}}.qhcp
+	echo.^> qcollectiongenerator %BUILDDIR%\qthelp\PyHatch.qhcp
 	echo.To view the help file:
-	echo.^> assistant -collectionFile %BUILDDIR%\qthelp\{{projName}}.ghc
+	echo.^> assistant -collectionFile %BUILDDIR%\qthelp\PyHatch.ghc
 	goto end
 )
 

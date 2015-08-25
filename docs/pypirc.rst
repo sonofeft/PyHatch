@@ -102,7 +102,9 @@ If you want to use this approach, then edit **.pypirc** to contain your username
 
 Move **.pypirc** (or a copy of **.pypirc**) to your home directory where it will be found automatically by setup.py::
 
-    ~/.pypirc                           on Linux
+           ~/.pypirc                 Home Directory
+
+    /home/<Your Name>/.pypirc           on Linux
     C:\Users\<Your Name>\.pypirc        on Windows
 
 

@@ -72,8 +72,8 @@ The examples/ subdirectory contains any example files that use the project.
 The hope for PyHatch is that better code will result from early organization
 and test driven development.
 
-Notice that a config file (PyHatch.cfg) is created in the same directory
-as __file__.  That config file holds project and personal data.
+Notice that a config file (PyHatch.cfg) is created in the users home directory
+(in os.path.expanduser('~/')).  That config file holds project and personal data.
 
 --------------
 """
@@ -123,12 +123,15 @@ except:
 # place config file in PyHatch code directory
 USER_DATA_DIR = os.path.dirname( os.path.abspath( __file__ ) )
 print( 'User Data Directory =',USER_DATA_DIR )
-print()
+print('')
+USER_HOME_DIR = os.path.dirname( os.path.expanduser('~/') )
+print( 'User Home Directory =',USER_HOME_DIR )
+print('')
 
 DOC_TEMPLATE_DIR = os.path.join( USER_DATA_DIR, 'doc_templates' )
 TEMPLATE_DIR = os.path.join( USER_DATA_DIR, 'templates' )
 
-USER_DATA_CFG_FNAME = os.path.join( USER_DATA_DIR, 'PyHatch.cfg' )
+USER_DATA_CFG_FNAME = os.path.join( USER_HOME_DIR, 'PyHatch.cfg' )
 
 print( 'User Config =',USER_DATA_CFG_FNAME )
 
@@ -322,6 +325,9 @@ class Hatch(object):
             dataD['projName_lower'] = self.projName.lower()
             dataD['projName'] = self.projName
             dataD['projName_rst'] = self.projName + '\n' + '='*len(self.projName)
+            
+            s = self.projName + " Code Functions"
+            dataD['projCode_rst'] = s + '\n' + '='*len(s)
 
             dataD['version'] = self.version
             dataD['author'] = self.author
@@ -460,7 +466,7 @@ class Hatch(object):
             place_template_file( projDir, '.travis.yml' )
             
             # Get license text from LICENSE_D
-            create_file( projDir, 'LICENSE.txt', contents=LICENSE_D[self.proj_license] )
+            create_file( projDir, 'LICENSE.txt', contents=LICENSE_D[self.proj_license]%dataD )
 
             # Make sphinx doc files
             for fname in ['index.rst', 'Makefile', 'fulltoc.py', 'functions.rst', 

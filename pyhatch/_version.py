@@ -7,4 +7,4 @@ This file can be executed with execfile to create a local variable __version__
 creates local __version__ variable.
 
 """
-__version__ = '0.0.1'  # METADATA_RESET:__version__ = '<<version>>'
+__version__ = '0.0.3'  # METADATA_RESET:__version__ = '<<version>>'
