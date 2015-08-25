@@ -3,12 +3,7 @@
 TODO List
 =========
 
-* Fix permissions issue on Linux
-    - Put PyHatch.cfg into os.path.expanduser('~/')
-
 * On linux, tries to compile template `*.py` files.
-
-* quickstart.rst template - Install and Getting Started
 
 * launch_tk_nosy script
 
@@ -22,4 +17,4 @@ TODO List
 
 * add **Announce Your Project**
 
-
+* Convert GUI to pack from place

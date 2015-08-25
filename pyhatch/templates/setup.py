@@ -92,7 +92,7 @@ setup(
     install_requires = requires,  # read from requirements.txt
 
     tests_require = ['nose','coverage'], # ...OR... ['pytest','pytest-cov']
-    test_suite='tests', # allows "setup.py test" to work
+    test_suite='{{projName_lower}}.tests', # allows "setup.py test" to work
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
