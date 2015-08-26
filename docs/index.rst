@@ -10,6 +10,7 @@ Contents:
    :maxdepth: 2
 
    quickstart 
+   example
    project_checklist
    new_github_proj
    pip

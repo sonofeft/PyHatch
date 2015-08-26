@@ -1,17 +1,15 @@
 import sys
 import os
 
-sys.path.insert(0, os.path.abspath("../../"))
-
 from pyhatch.hatch_supt import Hatch
 
-IN_TEST_MODE = False
+SIMPLEDESC='''PyProTem acts as a temporary project for test purposes.'''
 
-SIMPLEDESC='PyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.'
-LONGDESC="""Use pyProTem to test tox usage locally, travis CI on GitHub on checkin, tk_nosy to watch files locally and alert breakage, operation under both python 2 and 3."""
+LONGDESC="""Use pyProTem to test tox usage locally, travis CI on checkin to 
+GitHub, tk_nosy to watch files locally and alert breakage, operation under 
+both python 2 and 3 on Windows and Linux."""
 
 h = Hatch(projName='PyProTem', 
-          in_test_mode=IN_TEST_MODE,
           mainPyFileName='main.py', 
           mainDefinesClass='Y',
           mainClassName='ProTem', 
@@ -28,5 +26,6 @@ h = Hatch(projName='PyProTem',
           year=None,   # if None, set to this year
           organization=None)  # if None, set to author
 
+# This example places project into user home directory
 h.save_project_below_this_dir( os.path.expanduser('~/') )
 

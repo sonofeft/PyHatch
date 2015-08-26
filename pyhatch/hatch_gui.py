@@ -87,63 +87,63 @@ class _Hatch_GUI(object):
         # postpone self.master.bind("<Configure>", self.Master_Configure)
         self.master.bind('<Enter>', self.bindConfigure)
 
-        self.master.title("empty_main")
+        self.master.title("PyHatch GUI")
         self.master.resizable(0,0) # Linux may not respect this
 
-        dialogframe = Frame(master, width=819, height=860)
+        dialogframe = Frame(master, width=810, height=630)
         dialogframe.pack()
 
         self.Shortdesc_Labelframe = LabelFrame(dialogframe,
                                                text="Short Description (1-liner)",
                                                height="90", width="718")
-        self.Shortdesc_Labelframe.place(x=60, y=180)
+        self.Shortdesc_Labelframe.place(x=60, y=127)
 
         helv20 = tkFont.Font(family='Helvetica', size=20, weight='bold')
 
         self.Buildproject_Button = Button(dialogframe,text="Build Project",
                                           width="15", font=helv20)
-        self.Buildproject_Button.place(x=492, y=24, width=263, height=68)
+        self.Buildproject_Button.place(x=492, y=10, width=263, height=68)
         self.Buildproject_Button.bind("<ButtonRelease-1>",
                                       self.Buildproject_Button_Click)
 
         self.Selectdir_Button = Button(dialogframe,text="<Select Directory>",
                                        width="15")
-        self.Selectdir_Button.place(x=72, y=792, width=672, height=31)
+        self.Selectdir_Button.place(x=72, y=585, width=672, height=31)
         self.Selectdir_Button.bind("<ButtonRelease-1>",
                                    self.Selectdir_Button_Click)
 
         self.Author_Entry = Entry(dialogframe,width="15")
-        self.Author_Entry.place(x=228, y=576, width=187, height=21)
+        self.Author_Entry.place(x=228, y=424, width=187, height=21)
         self.Author_Entry_StringVar = StringVar()
         self.Author_Entry.configure(textvariable=self.Author_Entry_StringVar)
         self.Author_Entry_StringVar.set("John Doe")
 
         self.Classname_Entry = Entry(dialogframe,width="15")
-        self.Classname_Entry.place(x=192, y=108, width=165, height=21)
+        self.Classname_Entry.place(x=192, y=73, width=165, height=21)
         self.Classname_Entry_StringVar = StringVar()
         self.Classname_Entry.configure(textvariable=self.Classname_Entry_StringVar)
         self.Classname_Entry_StringVar.set("MyClass")
 
         self.Copyright_Entry = Entry(dialogframe,width="15")
-        self.Copyright_Entry.place(x=228, y=648, width=461, height=21)
+        self.Copyright_Entry.place(x=228, y=478, width=461, height=21)
         self.Copyright_Entry_StringVar = StringVar()
         self.Copyright_Entry.configure(textvariable=self.Copyright_Entry_StringVar)
         self.Copyright_Entry_StringVar.set("Copyright (c) 2013 John Doe")
 
         self.Email_Entry = Entry(dialogframe,relief="sunken", width="15")
-        self.Email_Entry.place(x=228, y=684, width=458, height=21)
+        self.Email_Entry.place(x=228, y=505, width=458, height=21)
         self.Email_Entry_StringVar = StringVar()
         self.Email_Entry.configure(textvariable=self.Email_Entry_StringVar)
         self.Email_Entry_StringVar.set("johndoe@happypond.org")
 
         self.GithubUserName_Entry = Entry(dialogframe,relief="sunken", width="15")
-        self.GithubUserName_Entry.place(x=228, y=730, width=458, height=21)
+        self.GithubUserName_Entry.place(x=228, y=539, width=458, height=21)
         self.GithubUserName_Entry_StringVar = StringVar()
         self.GithubUserName_Entry.configure(textvariable=self.GithubUserName_Entry_StringVar)
         self.GithubUserName_Entry_StringVar.set("github_user_name")
 
         self.Funcname_Entry = Entry(dialogframe,width="15")
-        self.Funcname_Entry.place(x=192, y=144, width=157, height=21)
+        self.Funcname_Entry.place(x=192, y=100, width=157, height=21)
         self.Funcname_Entry_StringVar = StringVar()
         self.Funcname_Entry.configure(textvariable=self.Funcname_Entry_StringVar)
         self.Funcname_Entry_StringVar.set("my_function")
@@ -152,23 +152,23 @@ class _Hatch_GUI(object):
         LICENSE_OPTIONS = tuple( sorted(CLASSIFIER_D.keys()) )
         self.License_Entry_StringVar = StringVar()
         self.License_Entry = OptionMenu(dialogframe, self.License_Entry_StringVar, *LICENSE_OPTIONS)
-        self.License_Entry.place(x=552, y=576, width=184, height=21)
+        self.License_Entry.place(x=552, y=424, width=184, height=21)
         self.License_Entry_StringVar.set( LICENSE_OPTIONS[0] )
 
         self.Mainpyname_Entry = Entry(dialogframe,width="15")
-        self.Mainpyname_Entry.place(x=168, y=60, width=196, height=21)
+        self.Mainpyname_Entry.place(x=168, y=37, width=196, height=21)
         self.Mainpyname_Entry_StringVar = StringVar()
         self.Mainpyname_Entry.configure(textvariable=self.Mainpyname_Entry_StringVar)
         self.Mainpyname_Entry_StringVar.set("main.py")
 
         self.Projname_Entry = Entry(dialogframe,width="15")
-        self.Projname_Entry.place(x=168, y=24, width=194, height=21)
+        self.Projname_Entry.place(x=168, y=10, width=194, height=21)
         self.Projname_Entry_StringVar = StringVar()
         self.Projname_Entry.configure(textvariable=self.Projname_Entry_StringVar)
         self.Projname_Entry_StringVar.set("MyProject")
 
         self.Shortdesc_Entry = Entry(dialogframe,width="15")
-        self.Shortdesc_Entry.place(x=72, y=204, width=688, height=48)
+        self.Shortdesc_Entry.place(x=72, y=150, width=688, height=48)
         self.Shortdesc_Entry_StringVar = StringVar()
         self.Shortdesc_Entry.configure(textvariable=self.Shortdesc_Entry_StringVar)
         self.Shortdesc_Entry_StringVar.set("My project does this")
@@ -176,61 +176,61 @@ class _Hatch_GUI(object):
         # Status must be correct format
         self.Status_Entry_StringVar = StringVar()
         self.Status_Entry = OptionMenu(dialogframe, self.Status_Entry_StringVar, *DEV_STATUS_OPTIONS)
-        self.Status_Entry.place(x=228, y=612, width=183, height=21)
+        self.Status_Entry.place(x=228, y=451, width=183, height=21)
         self.Status_Entry_StringVar.set(DEV_STATUS_OPTIONS[0])
 
         self.Version_Entry = Entry(dialogframe,width="15")
-        self.Version_Entry.place(x=552, y=612, width=184, height=21)
+        self.Version_Entry.place(x=552, y=451, width=184, height=21)
         self.Version_Entry_StringVar = StringVar()
         self.Version_Entry.configure(textvariable=self.Version_Entry_StringVar)
         self.Version_Entry_StringVar.set("0.1.1")
 
         self.Author_Label = Label(dialogframe,text="Author", width="15")
-        self.Author_Label.place(x=96, y=576, width=112, height=22)
+        self.Author_Label.place(x=96, y=424, width=112, height=22)
 
         self.Classname_Label = Label(dialogframe,text="Class Name", width="15")
-        self.Classname_Label.place(x=60, y=108, width=112, height=22)
+        self.Classname_Label.place(x=60, y=73, width=112, height=22)
 
         self.Copyright_Label = Label(dialogframe,text="Copyright", width="15")
-        self.Copyright_Label.place(x=96, y=648, width=113, height=23)
+        self.Copyright_Label.place(x=96, y=478, width=113, height=23)
 
         self.Email_Label = Label(dialogframe,text="Email", width="15")
-        self.Email_Label.place(x=96, y=684, width=113, height=23)
+        self.Email_Label.place(x=96, y=505, width=113, height=23)
 
         self.GithubUserName_Label = Label(dialogframe,text="GithubUserName", width="15")
-        self.GithubUserName_Label.place(x=96, y=730, width=113, height=23)
+        self.GithubUserName_Label.place(x=96, y=539, width=113, height=23)
 
         self.Funcname_Label = Label(dialogframe,text="Function Name", width="15")
-        self.Funcname_Label.place(x=60, y=144, width=112, height=22)
+        self.Funcname_Label.place(x=60, y=100, width=112, height=22)
 
         self.License_Label = Label(dialogframe,text="License", width="15")
-        self.License_Label.place(x=432, y=576, width=113, height=23)
+        self.License_Label.place(x=432, y=424, width=113, height=23)
 
         self.Longdesc_Label = Label(dialogframe,text="Paragraph Description", width="15")
-        self.Longdesc_Label.place(x=216, y=288, width=376, height=22)
+        self.Longdesc_Label.place(x=216, y=220, width=376, height=22)
 
         self.Mainpyname_Label = Label(dialogframe,text="Main Python File", width="15")
-        self.Mainpyname_Label.place(x=48, y=60, width=112, height=22)
+        self.Mainpyname_Label.place(x=48, y=37, width=112, height=22)
 
         self.Projname_Label = Label(dialogframe,text="Project Name", width="15")
-        self.Projname_Label.place(x=48, y=24, width=112, height=22)
+        self.Projname_Label.place(x=48, y=10, width=112, height=22)
 
         self.Selectdir_Label = Label(dialogframe,
                                      text="Select the Directory Below Which to Place Your Project",
                                      width="15")
-        self.Selectdir_Label.place(x=156, y=768, width=536, height=24)
+        self.Selectdir_Label.place(x=156, y=567, width=536, height=24)
 
         self.Status_Label = Label(dialogframe,text="Status", width="15")
-        self.Status_Label.place(x=96, y=612, width=114, height=24)
+        self.Status_Label.place(x=96, y=451, width=114, height=24)
 
         self.Version_Label = Label(dialogframe,text="Version", width="15")
-        self.Version_Label.place(x=432, y=612, width=113, height=23)
+        self.Version_Label.place(x=432, y=451, width=113, height=23)
 
         self.Isclass_Radiobutton = Radiobutton(dialogframe,
                                                text="Class Project",
                                                value="Class Project",
                                                width="15", anchor=W)
-        self.Isclass_Radiobutton.place(x=320, y=108, width=135, height=27)
+        self.Isclass_Radiobutton.place(x=320, y=73, width=135, height=27)
         self.RadioGroup1_StringVar = StringVar()
         self.RadioGroup1_StringVar.set("Class Project")
         self.RadioGroup1_StringVar_traceName = \
@@ -241,19 +241,19 @@ class _Hatch_GUI(object):
         self.Isfunction_Radiobutton = Radiobutton(dialogframe,text="Function Project",
                                                   value="Function Project",
                                                   width="15", anchor=W)
-        self.Isfunction_Radiobutton.place(x=320, y=144, width=135, height=27)
+        self.Isfunction_Radiobutton.place(x=320, y=100, width=135, height=27)
         self.Isfunction_Radiobutton.configure(variable=self.RadioGroup1_StringVar )
 
 
         lbframe = Frame( dialogframe )
         self.Text_1_frame = lbframe
         scrollbar = Scrollbar(lbframe, orient=VERTICAL)
-        self.Text_1 = Text(lbframe, width="40", height="12", yscrollcommand=scrollbar.set)
+        self.Text_1 = Text(lbframe, width="40", height="6", yscrollcommand=scrollbar.set)
         scrollbar.config(command=self.Text_1.yview)
         scrollbar.pack(side=RIGHT, fill=Y)
         self.Text_1.pack(side=LEFT, fill=BOTH, expand=1)
 
-        self.Text_1_frame.place(x=72, y=312, width=665, height=237)
+        self.Text_1_frame.place(x=72, y=250, width=665, height=160)
         # >>>>>>insert any user code below this comment for section "top_of_init"
 
         self.dirname = '<Select Directory>'

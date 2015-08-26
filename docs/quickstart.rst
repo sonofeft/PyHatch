@@ -2,7 +2,7 @@
 .. quickstart
 
 QuickStart
-=========
+==========
 
 Verify tkinter
 --------------
@@ -74,7 +74,7 @@ After installing with pip, there will be a launch command line program called **
 
     pyhatch
 
-and the pyhatch window should pop up. If not, then there may be an issue with your system path.
+and the ``PyHatch GUI`` should pop up. If not, then there may be an issue with your system path.
 The path for the pyhatch executable might be something like::
 
     /usr/local/bin/pyhatch             (if installed with sudo pip install -e .)
@@ -88,7 +88,7 @@ Make sure your system path includes the above path to **pyhatch**.
 
 After launching pyhatch, you simply fill in the form, select a directory in which to place the new project and hit the **Build Project** button.
 
-It is possible to run pyhatch directly from source without installing it. Simply navigate to the source files and type::
+It is possible to run the ``PyHatch GUI`` directly from source without installing it. Simply navigate to the source files and type::
 
     python hatch_gui.py
 
