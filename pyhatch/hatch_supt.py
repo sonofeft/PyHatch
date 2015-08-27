@@ -1,14 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: ascii -*-
-from __future__ import absolute_import
-from __future__ import print_function
-
-#    I like extra spaces inside parens and sometimes camelCase
-# pylint: disable=C0326
-# pylint: disable=C0103
-# I would prefer to redefine variable-rgx:??[a-z][A-Za-z0-9]{1,30}$
-
-# pylint: disable=R0902, R0913, R0914, R0912
 
 
 """
@@ -64,7 +55,7 @@ documentation for the project.  It is set up to automatically read the project
 ``*.py`` files and include code documentation on the fly.
 
 Run "make html" in the docs/ subdirectory (with sphinx installed) to generate
-HTML documentation for the project. The file "index.html" is the main page of 
+HTML documentation for the project. The file "index.html" is the main page of
 the documentation in the directory docs/_build/html.
 
 The examples/ subdirectory contains any example files that use the project.
@@ -77,6 +68,18 @@ Notice that a config file (PyHatch.cfg) is created in the users home directory
 
 --------------
 """
+
+
+#    I like extra spaces inside parens and sometimes camelCase
+# pylint: disable=C0326
+# pylint: disable=C0103
+# I would prefer to redefine variable-rgx:??[a-z][A-Za-z0-9]{1,30}$
+
+# pylint: disable=R0902, R0913, R0914, R0912, W0122
+
+from __future__ import absolute_import
+from __future__ import print_function
+
 import os
 here = os.path.abspath(os.path.dirname(__file__))
 #  execfile( os.path.join(here,'_version.py')) # creates local __version__ variable
@@ -99,7 +102,7 @@ if sys.version_info < (3,):
     text = unicode
 else:
     from builtins import str as text  # for python 2/3 unicode issues
-    
+
 import configparser
 import stat
 import datetime
@@ -117,7 +120,7 @@ except:
     from fill_template import get_file_template
     from license_templates import LICENSE_D, HEADER_D, CLASSIFIER_D
     from pySphinxLogo import save_logo_to_file
-    
+
 # Code goes below.
 #
 # place config file in PyHatch code directory
@@ -152,7 +155,7 @@ else:
             CONFIG.write( configfile )
     except:
         pass
-        
+
 DEV_STATUS_OPTIONS = (
     '1 - Planning',
     '2 - Pre-Alpha',
@@ -165,13 +168,13 @@ DEV_STATUS_OPTIONS = (
 class Hatch(object):
     """
     Hatch is main administrative class that creates a new project.
-    
+
     Hatch gathers user data and builds new project with directory structure shown above.
-    
+
     :param projName: (str) proper name of project ex. 'MyProject'. MUST start with capital letter.
     :param in_test_mode: (boolean) flag to indicate test mode or live mode
     :param mainPyFileName: (str) main file in code directory ex. "main.py"
-    :param mainDefinesClass: (boolean) flag to indicate if mainPyFileName defines 
+    :param mainDefinesClass: (boolean) flag to indicate if mainPyFileName defines
         a class or function
     :param mainFunctionName: (str) name of function defined by mainPyFileName
     :param author: (str) author's name, ex. 'John Doe'
@@ -185,7 +188,7 @@ class Hatch(object):
     :param year: (str) or (int) year for copyright
     :param organization: (str) name of organization for copyright
     :param github_user_name: (str) user name at GitHub
-    
+
     """
 
     def __init__(self, projName='MyProject', in_test_mode=False,
@@ -206,7 +209,7 @@ class Hatch(object):
         projName = projName.strip()
         projName = projName[:1].upper() + projName[1:]
         self.projName = projName
-        
+
         self.mainPyFileName = mainPyFileName
         self.mainDefinesClass = mainDefinesClass
         self.mainClassName = mainClassName
@@ -225,7 +228,7 @@ class Hatch(object):
         self.status = status
         if self.status not in DEV_STATUS_OPTIONS:
             self.print_proj_status_error()
-        
+
         self.simpleDesc = simpleDesc
         self.longDesc = longDesc
         if year == None:
@@ -239,40 +242,42 @@ class Hatch(object):
             self.organization = organization
 
         # for general ID stuff, if not input, check CONFIG
-        for gid in generalIdL:
-            if not getattr(self, gid, ''): # if not input, check CONFIG
-                if CONFIG.has_option('generalId', gid):
-                    setattr(self, gid, CONFIG.get('generalId', gid))
-                
+        for gen_id in generalIdL:
+            if not getattr(self, gen_id, ''): # if not input, check CONFIG
+                if CONFIG.has_option('generalId', gen_id):
+                    setattr(self, gen_id, CONFIG.get('generalId', gen_id))
+
     def print_proj_license_error(self):
+        """Print Error Message for user input value of license"""
         if self.proj_license not in CLASSIFIER_D:
             print('='*20,' ERROR in Hatch Object ', '='*20)
             print('    proj_license = "%s" which is NOT in supported list.'%self.proj_license)
             print('    Accepted list =',CLASSIFIER_D.keys())
             print("    (if your's is not listed, pick one from above and correct it by hand later.)")
             print('='*55)
-                
+
     def print_proj_status_error(self):
+        """Print Error Message for user input value of project status"""
         if self.status not in DEV_STATUS_OPTIONS:
             print('='*20,' ERROR in Hatch Object ', '='*20)
             print('    status = "%s" which is NOT in supported list.'%self.status)
             print('    Accepted list =',DEV_STATUS_OPTIONS)
             print("    ")
             print('='*55)
-        
+
     def save_project_below_this_dir(self, save_dir):
         '''Creates file layout of project'''
-        
+
         # print warning and exit if proj_license is not recognized
         if self.proj_license not in CLASSIFIER_D:
             self.print_proj_license_error()
             return
-            
+
         # print warning and exit if status is not recognized
         if self.status not in DEV_STATUS_OPTIONS:
             self.print_proj_status_error()
-            return            
-        
+            return
+
         print( 'save_dir =',save_dir )
         print( 'os.path.abspath( save_dir )=',os.path.abspath( save_dir ) )
 
@@ -305,23 +310,23 @@ class Hatch(object):
             print( 'ERROR... %s already exists'%projDir )
             return 'Dir Already Exists'
         else:
-            
+
             # Update CONFIG file with current personal info
-            for gid in generalIdL:
-                if getattr(self, gid, ''): # if has a value
-                    CONFIG.set('generalId', gid, getattr(self, gid))
-            
+            for gen_id in generalIdL:
+                if getattr(self, gen_id, ''): # if has a value
+                    CONFIG.set('generalId', gen_id, getattr(self, gen_id))
+
             try:
-                with open(USER_DATA_CFG_FNAME, 'w') as configfile:
-                    CONFIG.write( configfile )
+                with open(USER_DATA_CFG_FNAME, 'w') as config_file:
+                    CONFIG.write( config_file )
             except:
                 pass
-            
-            
+
+
             # get dataD dictionary to build file contents strings
             dataD = {}
-            for gid in generalIdL:
-                dataD[gid] = getattr(self, gid, '')
+            for gen_id in generalIdL:
+                dataD[gen_id] = getattr(self, gen_id, '')
             for pid in projectInfoL:
                 dataD[pid] = getattr(self, pid, '')
 
@@ -329,7 +334,7 @@ class Hatch(object):
             dataD['projName_lower'] = self.projName.lower()
             dataD['projName'] = self.projName
             dataD['projName_rst'] = self.projName + '\n' + '='*len(self.projName)
-            
+
             s = self.projName + " Code Functions"
             dataD['projCode_rst'] = s + '\n' + '='*len(s)
 
@@ -346,12 +351,12 @@ class Hatch(object):
             dataD['longDesc'] = self.longDesc
             dataD['year'] = self.year
             dataD['organization'] = self.organization
-            
+
             if self.proj_license in CLASSIFIER_D:
                 dataD['license_classifier'] = CLASSIFIER_D[self.proj_license]
             else:
                 dataD['license_classifier'] = 'License :: OSI Approved'
-                
+
 
             if self.proj_license in  HEADER_D:
                 dataD['license_header'] = HEADER_D[self.proj_license] % dataD
@@ -364,31 +369,34 @@ class Hatch(object):
                 dataD['mainPyFilePrefix'] = self.mainPyFileName[:-3]
             else:
                 dataD['mainPyFilePrefix'] = self.mainPyFileName
-                
+
             dataD['mainPyFileName'] = dataD['mainPyFilePrefix'] + '.py'
 
             if self.mainDefinesClass=='Y':
                 dataD['func_or_class_name'] = self.mainClassName
                 code_contents_str = get_file_template( TEMPLATE_DIR, 'Module_Class.py', dataD )
-                
+
                 # change Class_Test_File.py to Class_Te_st_File.py so nosetests won't find it
                 test_contents_str = get_file_template( TEMPLATE_DIR, 'Class_Te_st_File.py', dataD )
                 dataD['example_call'] = 'my_class = ' + dataD['mainClassName'] + '()'
             else:
                 dataD['func_or_class_name'] = self.mainFunctionName
                 code_contents_str = get_file_template( TEMPLATE_DIR, 'Module_Function.py', dataD )
-                
+
                 # change Function_Test_File.py to Function_Te_st_File.py so nosetests won't find it
                 test_contents_str = get_file_template( TEMPLATE_DIR, 'Function_Te_st_File.py', dataD )
                 dataD['example_call'] = 'my_result = ' + dataD['mainFunctionName'] + '()'
 
             def make_directory( dirName ):
+                """Use os.mkdir to make directory.
+                   If in test mode, only print test message
+                """
                 if self.in_test_mode:
                     print( "TESTING make dir:", dirName )
                 else:
                     print( "Making dir:",dirName )
                     os.mkdir( dirName )
-                    
+
             # Start making directories
             make_directory( projDir )
             make_directory( codeDir )
@@ -412,7 +420,7 @@ class Hatch(object):
                     f = open(fname, 'w')
                 f.write(contents)
                 f.close()
-                
+
                 if not self.in_test_mode:
                     # Make sure permissions on file are good for owner
                     st = os.stat(fname)
@@ -430,12 +438,12 @@ class Hatch(object):
             #  comment the following line if you agree.
             create_file( testDir, '__init__.py', contents='') # allows "setup.py test" to work
             #  ???????????????????????????????????????????????
-            
+
             create_file( testDir, 'test_'+self.mainPyFileName, contents=test_contents_str)
 
             #print( 'dataD =',dataD )
             def place_template_file(dest_dir, fname ):
-                """Get template string from template subdirectory, render template 
+                """Get template string from template subdirectory, render template
                    and save to dest_dir
                 """
                 s = get_file_template( TEMPLATE_DIR, fname, dataD )
@@ -449,32 +457,32 @@ class Hatch(object):
             place_template_file( projDir, 'MANIFEST.in' )
             place_template_file( projDir, 'setup.py' )
             place_template_file( projDir, 'metadata_reset.py' )
-            
+
             place_template_file( projDir, '.pypirc' )
             #place_template_file( projDir, 'tk_nosy.py' )
-            
+
             if platform.system() == "Windows":
-                create_file( projDir, 'tox.ini', contents=get_file_template( 
+                create_file( projDir, 'tox.ini', contents=get_file_template(
                              TEMPLATE_DIR, 'tox_windows.ini', dataD ) )
             else:
-                create_file( projDir, 'tox.ini', contents=get_file_template( 
+                create_file( projDir, 'tox.ini', contents=get_file_template(
                              TEMPLATE_DIR, 'tox_linux.ini', dataD ) )
-            
+
 
             place_template_file( examplesDir, 'example_1.py' )
 
             # requirements.txt is empty, just a place-holder to edit later
             place_template_file( projDir, 'requirements.txt' )
-            
+
             # If using GitHub, Travis CI can be used to verify code on check-in
             place_template_file( projDir, '.travis.yml' )
-            
+
             # Get license text from LICENSE_D
             create_file( projDir, 'LICENSE.txt', contents=LICENSE_D[self.proj_license]%dataD )
 
             # Make sphinx doc files
-            for fname in ['index.rst', 'Makefile', 'fulltoc.py', 'functions.rst', 
-                           'conf.py', 'sphinxy.py', 'keyboard_hit.py', 'make.bat']:
+            for fname in ['index.rst', 'Makefile', 'fulltoc.py', 'functions.rst',
+                          'conf.py', 'sphinxy.py', 'keyboard_hit.py', 'make.bat']:
                 s = get_file_template( DOC_TEMPLATE_DIR, fname, dataD )
                 create_file( docsDir, fname, contents=s )
 

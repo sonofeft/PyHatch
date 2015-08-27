@@ -175,7 +175,8 @@ class _Hatch_GUI(object):
 
         # Status must be correct format
         self.Status_Entry_StringVar = StringVar()
-        self.Status_Entry = OptionMenu(dialogframe, self.Status_Entry_StringVar, *DEV_STATUS_OPTIONS)
+        self.Status_Entry = OptionMenu(dialogframe, self.Status_Entry_StringVar,
+                                       *DEV_STATUS_OPTIONS)
         self.Status_Entry.place(x=228, y=451, width=183, height=21)
         self.Status_Entry_StringVar.set(DEV_STATUS_OPTIONS[0])
 

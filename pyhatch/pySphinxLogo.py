@@ -1,11 +1,18 @@
+#!/usr/bin/env python
+# -*- coding: ascii -*-
+"""Holds base64 version of Sphinx logo.  Can save as png file"""
 from __future__ import absolute_import
 from __future__ import print_function
 
 import base64
 
+
+#  pylint: disable=C0326, C0103
+
 def save_logo_to_file( fullpath, in_test_mode=False ):
+    """Saves base64 version of Sphinx logo as png file"""
     decoded_str = base64.b64decode( logo_b64str.replace('\n','') )
-    
+
     if in_test_mode:
         print( "TESTING make file:", fullpath )
     else:
@@ -203,6 +210,6 @@ tY/TNdlimy3itSiLAgAAi52vRVnEa1E+mPLf1Up0+1WZESoAAAAASUVORK5CYII=
 
 
 if __name__=="__main__":
-    
+
     save_logo_to_file( r'logo.png' ) # Normally a full path name
 

@@ -40,7 +40,7 @@ exec( open( target_file ).read() )  # creates local __version__ variable
 
 
 setup(
-    name='pyhatch',
+    name='PyHatch',
     version = __version__,  # METADATA_RESET:    version = '<<version>>',
 
     description = 'PyHatch initializes files and directory structure for new python projects.',

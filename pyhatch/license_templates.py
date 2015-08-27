@@ -5,6 +5,8 @@
    dictionaries LICENS_D and HEADER_D.
 """
 
+# pylint: disable=C0301, C0302
+
 LICENSE_D = {} # dict of license templates
 HEADER_D = {}  # dict of license headers
 CLASSIFIER_D = {}  # dict of classifier form of license
@@ -2102,7 +2104,7 @@ LICENSE_D["MPL-2.0"] = '''Mozilla Public License Version 2.0
     means any form of the work other than Source Code Form.
 
 1.7. "Larger Work"
-    means a work that combines Covered Software with other material, in 
+    means a work that combines Covered Software with other material, in
     a separate file or files, that is not Covered Software.
 
 1.8. "License"

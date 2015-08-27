@@ -1,4 +1,9 @@
-import json
+#!/usr/bin/env python
+# -*- coding: ascii -*-
+
+"""Gets Version Info from PyPI for package_name"""
+# pylint: disable=C0326, C0103
+#import json
 import requests
 from distutils.version import StrictVersion
 
@@ -60,21 +65,20 @@ def next_major_version(package_name):
 
 
 if __name__ == "__main__":
-    
+
     #print "\n".join(versions("scikit-image"))
-    package_name = "scikit-image"
-    print 'Versions for',package_name
-    versionL = versions(package_name)
-    if versionL:
-        print 'Newest Version =', versionL[0]
+    pkg_name = "scikit-image"
+    print 'Versions for',pkg_name
+    verL = versions(pkg_name)
+    if verL:
+        print 'Newest Version =', verL[0]
     else:
         print 'No Versions Available'
-        
-    print 
-    print 'newest_version =',newest_version(package_name)
-    print 'next_micro_version =',next_micro_version(package_name)
-    print 'next_minor_version =',next_minor_version(package_name)
-    print 'next_major_version =',next_major_version(package_name)
-    
-    
-    
+
+    print
+    print 'newest_version =',newest_version(pkg_name)
+    print 'next_micro_version =',next_micro_version(pkg_name)
+    print 'next_minor_version =',next_minor_version(pkg_name)
+    print 'next_major_version =',next_major_version(pkg_name)
+
+

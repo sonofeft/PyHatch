@@ -1,4 +1,8 @@
+"""PyHatch __init__ module"""
+
 import os
+
+# pylint: disable=C0326, C0103, W0122
 
 here = os.path.abspath(os.path.dirname(__file__))
 
