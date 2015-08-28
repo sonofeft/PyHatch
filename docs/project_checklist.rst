@@ -14,6 +14,7 @@ New Project Checklist
 .. _PyPI: https://pypi.python.org/pypi
 .. _twine: https://pypi.python.org/pypi/twine
 .. _sphinx: http://sphinx-doc.org/
+.. _tk_nosy: http://tk_nosy.readthedocs.org/en/latest/
 
 The following checklist is designed to help set up and complete a new python programming project and host it on PyPI_.  
 
@@ -23,6 +24,8 @@ Before You Start Programming
 ----------------------------
 
 #. Check that your project's name is available on PyPI_. Go to `<https://pypi.python.org/pypi>`_ and use the search feature to verify that your desired project name is available. When you decide on an available name, you can create a repository and register it with PyPI_.
+    * Also look for a project that already does what you intend to do. 
+    * You may be able to contribute to an existing project instead of recreating a wheel ;-).
 
 #. Set up the project on GitHub_ or Bitbucket_ (I recommend GitHub_).
     * For GitHub_ (see :ref:`internal_new_github_proj`)
@@ -42,7 +45,7 @@ Before You Start Programming
 #. Configure your ``.pypirc`` file to make register and upload to PyPI_ easier. 
     * Edit the username and password in the ``.pypirc`` file that ``PyHatch`` creates
         - ``PyHatch`` leaves only place-holders for username and password
-    * See :ref:`package_pypirc` for guidance.
+    * Move ``.pypirc`` to your home directory after editing. See :ref:`package_pypirc` for guidance.
 
 #. Register you package with PyPI (Python Package Index)
     * The preferred way to register your package is by filling the web form at: https://pypi.python.org/pypi?%3Aaction=submit_form 
@@ -64,38 +67,53 @@ The Programming Cycle
 ---------------------
 
 #. Start programming and developing the code
-    * Use :ref:`internal_tox` and ``tk_nosy`` to constantly validate the code during development
+    * Use :ref:`internal_tox` and tk_nosy_ to constantly validate the code during development
         - :ref:`internal_tox` makes the virtualenv setup easy for different python versions
             - Tox needs accurate ``requirements.txt`` file
             - Tox needs accurate ``install_requires`` option within ``setup.py``
-        - ``tk_nosy`` makes TDD (Test Driven Development) easy
+        - tk_nosy_ makes TDD (Test Driven Development) easy
             - better still, try TDDD (Test Driven Documented Development)
-            - tk_nosy uses ``nosetests`` to run unittests. By default ``coverage`` is turned on. To turn ``coverage`` off, edit the setup.cfg file under the ``nosetests`` header. Change ``with-coverage`` from one to zero (1 to 0).
+            - tk_nosy_ uses ``nosetests`` to run unittests. By default ``coverage`` is turned on. To turn ``coverage`` off, edit the setup.cfg file under the ``nosetests`` header. Change ``with-coverage`` from one to zero (1 to 0).
+            
     * Use :ref:`internal_pylint` on each python file to constantly measure code quality
+        - The right IDE should do this automatically
     * Use :ref:`internal_travis_ci` to verify operation on Linux machines with different python versions
+        - Each push to GitHub_ should automatically run :ref:`internal_travis_ci`
     * Use sphinx_ to keep documentation current with code
-#. Verify the docs
-    * Whether just a README.rst or a full sphinx_ HTML site, verify the docs.
-        - If using ReadTheDocs, include a link back to GitHub repository somewhere in the docs
+    
+#. Constantly Work the Documentation
+    * Whether just a README.rst or a full sphinx_ HTML site, keep editing and re-editing the documentation.
     * Consider using the ``sphinxy.py`` script located in the ``docs`` subdirectory.
         - ``sphinxy.py`` rebuilds the HTML docs every time a ``*.rst`` file changes. It can make the documentation development cycle a little more convenient.
             - Note that ``sphinxy.py`` also changes the file system date for all ``*.rst`` files
-    
+    * Consider a ``QuickStart`` section in your docs (a quick install and use section)
+
+
+#. In addition to the :ref:`internal_pylint` already run on your code, consider running `cheesecake <https://github.com/griggheo/cheesecake>`_ to verify your code's "readiness".
+    * `Cheesecake <https://github.com/griggheo/cheesecake>`_ is more demanding and makes more value judgements than  :ref:`internal_pylint`.
+
 
 Upload to PyPI (or testPyPI)
 ----------------------------
+
+#. Run :ref:`internal_tox` before uploading to PyPI_
+    * This will test ``pip`` installs of package dependencies in the tox virtual environment.
+    * Make sure that your ``tox.ini`` file dependencies (``deps``) are the same as in your ``setup.py`` and ``requirements.txt`` files.
 
 #. Set the correct version number of the code
     * Open the file ``_version.py`` and edit the version number at the bottom of the file 
         - for example change **__version__ = '0.0.1'**
         - to **__version__ = '0.0.2'**
+    * Commit to GitHub_ with comment like::
+    
+        git add .
+        git commit -m "Release 0.0.2"
     
 #. Verify the docs
-    * Whether just a README.rst or a full sphinx_ HTML site, verify the docs.
+    * Whether just a README.rst or a full sphinx_ HTML site, re-read the documentation.
         - If using ReadTheDocs:
             - include a link to ReadTheDocs in README.rst
             - include a link back to GitHub repository somewhere in ReadTheDocs
-    * Consider a 'QuickStart' section in your docs (a quick install and use section)
         
 #. If you skipped this step before, Register you package with PyPI (Python Package Index)
     * Run ``python setup.py register``
@@ -104,10 +122,6 @@ Upload to PyPI (or testPyPI)
         - or ``python setup.py register -r testpypi`` on testPyPI
     * Check the site ``http://pypi.python.org/pypi/<projectname>``
         - Make sure that ``Home Page:`` links to your GitHub or Bitbucket source code repository.
-
-#. Consider running cheesecake to check the "readiness" of your code
-    * See: https://github.com/griggheo/cheesecake
-    * It is more rigorous than simply running :ref:`internal_pylint`, but provides more `food for thought` as you evaluate the quality of your own code.
     
 #. Create release file 
     * Run `` python setup.py sdist``
@@ -155,5 +169,18 @@ Upload to PyPI (or testPyPI)
         
 #. Run unittests on the install with a virtualenv or clean virtual machine.   
     * Either ``nosetests`` or ``py.test`` should work
+    
 #. Test the ``entry_points`` command from ``setup.py``.
     * Should be able to simply run ``my_command`` from command line environment.
+    
+#. Check the three main web pages for your project::
+
+    The Code at: https://github.com/<github user name>/<package name>
+
+    The Docs at: http://<package name>.readthedocs.org/en/latest/
+
+    PyPI page at: https://pypi.python.org/pypi/<package name>
+   
+#. Let the world know what you've done.
+    * Announce your project on `<https://mail.python.org/mailman/listinfo/python-announce-list>`_
+

@@ -4,8 +4,8 @@
 QuickStart
 ==========
 
-Verify tkinter
---------------
+Verify tkinter Installed
+------------------------
 
 .. note::
     You only need tkinter if you use the PyHatch GUI.
@@ -32,8 +32,17 @@ You can test the installation from a terminal window with::
 
 This should pop up a small test window.
 
-Install
--------
+Verify Sphinx Installed
+-----------------------
+
+.. _Sphinx: http://sphinx-doc.org/
+
+Sphinx_ is highly recommended for creating your project's documentation.
+
+See `<http://sphinx-doc.org/latest/install.html>`_ for Install Instructions.
+
+Install PyHatch
+---------------
 
 The easiest way to install PyHatch is::
 

@@ -3,6 +3,8 @@
 TODO List
 =========
 
+* Make a template for ``QuickStart``
+
 * On linux, tries to compile template `*.py` files.
 
 * launch_tk_nosy script
