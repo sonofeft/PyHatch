@@ -25,7 +25,7 @@ Before You Start Programming
 
 #. Check that your project's name is available on PyPI_. Go to `<https://pypi.python.org/pypi>`_ and use the search feature to verify that your desired project name is available. When you decide on an available name, you can create a repository and register it with PyPI_.
     * Also look for a project that already does what you intend to do. 
-    * You may be able to contribute to an existing project instead of recreating a wheel ;-).
+    * You may be able to contribute to an existing project instead of reinventing the wheel ;-).
 
 #. Set up the project on GitHub_ or Bitbucket_ (I recommend GitHub_).
     * For GitHub_ (see :ref:`internal_new_github_proj`)

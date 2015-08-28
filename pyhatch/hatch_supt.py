@@ -235,6 +235,8 @@ class Hatch(object):
             self.year = datetime.date.today().year
         else:
             self.year = year
+            
+        self.date_str = datetime.date.today().strftime('%b %d, %Y')
 
         if organization == None:
             self.organization = author
@@ -350,6 +352,7 @@ class Hatch(object):
 
             dataD['longDesc'] = self.longDesc
             dataD['year'] = self.year
+            dataD['date_str'] = self.date_str
             dataD['organization'] = self.organization
 
             if self.proj_license in CLASSIFIER_D:
@@ -454,8 +457,10 @@ class Hatch(object):
 
             place_template_file( projDir, 'setup.cfg' )
             place_template_file( projDir, 'README.rst' )
+            place_template_file( projDir, 'HISTORY.rst' )
             place_template_file( projDir, 'MANIFEST.in' )
             place_template_file( projDir, 'setup.py' )
+            place_template_file( projDir, 'history_from_github_api.py')
             place_template_file( projDir, 'metadata_reset.py' )
 
             place_template_file( projDir, '.pypirc' )
@@ -482,7 +487,8 @@ class Hatch(object):
 
             # Make sphinx doc files
             for fname in ['index.rst', 'Makefile', 'fulltoc.py', 'functions.rst',
-                          'conf.py', 'sphinxy.py', 'keyboard_hit.py', 'make.bat']:
+                          'conf.py', 'sphinxy.py', 'keyboard_hit.py', 'make.bat',
+                          'history.rst', 'build_all_html.py']:
                 s = get_file_template( DOC_TEMPLATE_DIR, fname, dataD )
                 create_file( docsDir, fname, contents=s )
 
