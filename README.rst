@@ -88,8 +88,8 @@ The examples/ subdirectory contains any example files that use the project.
 The hope for PyHatch is that better code will result from early organization
 and test driven development.
 
-Notice that a configuration file (PyHatch.cfg) is created in the ``pyhatch`` 
-subdirectory.  That configuration file holds project and personal data that
+Notice that a configuration file (PyHatch.cfg) is created in the users home 
+directory.  That configuration file holds project and personal data that
 will help autofill the PyHatch GUI the second time tht PyHatch is used.
 
 
