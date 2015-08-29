@@ -27,6 +27,8 @@ PyHatch is shown below::
         docs/
             conf.py
             index.rst
+        .travis.yml
+        HISTORY.rst
         LICENSE.txt
         MANIFEST.in
         README.rst

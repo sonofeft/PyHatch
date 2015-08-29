@@ -48,6 +48,9 @@ PyHatch is shown below.::
         docs/
             conf.py
             index.rst
+        .travis.yml
+        HISTORY.rst
+        history_from_github_api.py
         LICENSE.txt
         MANIFEST.in
         README.rst

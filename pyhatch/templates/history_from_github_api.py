@@ -70,4 +70,11 @@ for D in t.json():
     last_date_str = date_str
     last_author_str = author_str
 
+fOut.write("""
+* {{date_str}}
+    - (by: {{github_user_name}})
+        - First Created {{projName}} with PyHatch
+"""
+
+
 fOut.close()

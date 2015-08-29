@@ -22,6 +22,7 @@ Contents:
    pylint
    fulltable_of_contents
    functions
+   making_history
    history
 
 
