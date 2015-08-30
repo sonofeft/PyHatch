@@ -8,6 +8,13 @@ GitHub Log
 
 * Aug 30, 2015
     - (by: sonofeft) 
+        - Version 0.0.8
+            Added copyright page to docs.
+        - Version 0.0.7
+            Cleaned up history.rst and authors.rst as well as quickstart template
+        - Added Quickstart page to docs
+            Added logo changeout instructions.
+            Added PyHatch links to history.rst page.
         - Version 0.0.6
             Added AUTHORS.rst, fixed history script bug, and link error
 * Aug 29, 2015
