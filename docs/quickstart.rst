@@ -107,7 +107,7 @@ It is possible to run the ``PyHatch GUI`` directly from source without installin
 pip Error Messages
 ------------------
 
-If you get an error message that ``pip`` is not found, see `https://pip.pypa.io/en/latest/installing.html`_ for full description of pip installation.
+If you get an error message that ``pip`` is not found, see `<https://pip.pypa.io/en/latest/installing.html>`_ for full description of pip installation.
 
 I've sometimes had issues with pip failing on Linux with a message like::
 

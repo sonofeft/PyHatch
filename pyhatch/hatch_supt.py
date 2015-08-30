@@ -342,6 +342,9 @@ class Hatch(object):
             s = self.projName + " Code Functions"
             dataD['projCode_rst'] = s + '\n' + '='*len(s)
 
+            s = self.projName + " Authors"
+            dataD['authors_rst'] = s + '\n' + '='*len(s)
+
             dataD['version'] = self.version
             dataD['author'] = self.author
             dataD['github_user_name'] = self.github_user_name
@@ -460,6 +463,7 @@ class Hatch(object):
             place_template_file( projDir, 'setup.cfg' )
             place_template_file( projDir, 'README.rst' )
             place_template_file( projDir, 'HISTORY.rst' )
+            place_template_file( projDir, 'AUTHORS.rst' )
             place_template_file( projDir, 'MANIFEST.in' )
             place_template_file( projDir, 'setup.py' )
             place_template_file( projDir, 'history_from_github_api.py')
@@ -490,7 +494,7 @@ class Hatch(object):
             # Make sphinx doc files
             for fname in ['index.rst', 'Makefile', 'fulltoc.py', 'functions.rst',
                           'conf.py', 'sphinxy.py', 'keyboard_hit.py', 'make.bat',
-                          'history.rst', 'build_all_html.py']:
+                          'history.rst', 'build_all_html.py', 'authors.rst']:
                 s = get_file_template( DOC_TEMPLATE_DIR, fname, dataD )
                 create_file( docsDir, fname, contents=s )
 

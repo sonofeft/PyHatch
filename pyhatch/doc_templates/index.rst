@@ -13,8 +13,9 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   history
    functions
+   authors
+   history
 
 
 Indices and tables

@@ -6,6 +6,13 @@ History
 GitHub Log
 ----------
 
+* Aug 29, 2015
+    - (by: sonofeft) 
+        - fixed doc error on PyHatch.cfg location
+        - Added ``Making History`` page
+            In sphinx docs, described how to run history_from_github_api.py python
+            script.
+            Also added a little doc cleanup.
 * Aug 28, 2015
     - (by: sonofeft) 
         - Added HISTORY.rst generation from GitHub API

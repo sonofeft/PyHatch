@@ -3,6 +3,12 @@
 TODO List
 =========
 
+* Add AUTHORS.rst and CONTRIBUTING.rst(or contributing page in docs) ???
+
+* Add tags to GitHub for version changes???
+    git tag -a v1.4 -m 'my version 1.4'
+    git push --tags
+
 * Make a template for ``QuickStart``
 
 * On linux, tries to compile template `*.py` files.
@@ -17,6 +23,3 @@ TODO List
 
 * Make checklist with actual project names in it from checklist template
 
-* add **Announce Your Project**
-
-* Convert GUI to pack from place

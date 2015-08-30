@@ -34,3 +34,4 @@ After entering your GitHub password (via the python ``getpass`` module for priva
 .. note::
 
     When PyHatch creates your project, it creates a version of ``history_from_github_api.py`` **specifically** for the Project Name and GitHub Username.  If you use ``history_from_github_api.py`` for another user or project, ``history_from_github_api.py``  will need to be edited.
+

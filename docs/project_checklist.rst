@@ -108,13 +108,17 @@ Upload to PyPI (or testPyPI)
     
         git add .
         git commit -m "Release 0.0.2"
+
+#. Create ``HISTORY.rst`` by running ``history_from_github_api.py``
+    * The above commit will help make ``HISTORY.rst`` current
+    * See :ref:`internal_making_history` for guidance
     
 #. Verify the docs
     * Whether just a README.rst or a full sphinx_ HTML site, re-read the documentation.
         - If using ReadTheDocs:
             - include a link to ReadTheDocs in README.rst
             - include a link back to GitHub repository somewhere in ReadTheDocs
-        
+
 #. If you skipped this step before, Register you package with PyPI (Python Package Index)
     * Run ``python setup.py register``
         - For testPyPI: ``python setup.py register -r https://testpypi.python.org/pypi``
