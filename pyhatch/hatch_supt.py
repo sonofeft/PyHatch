@@ -341,9 +341,16 @@ class Hatch(object):
 
             s = self.projName + " Code Functions"
             dataD['projCode_rst'] = s + '\n' + '='*len(s)
-
             s = self.projName + " Authors"
             dataD['authors_rst'] = s + '\n' + '='*len(s)
+
+            s = self.projName + " Code Functions"
+            dataD['projCode_rst'] = s + '\n' + '='*len(s)
+
+            s = "Install " + self.projName
+            dataD['install_projName_rst'] = s + '\n' + '-'*len(s)
+            s = "Running " + self.projName
+            dataD['running_projName_rst'] = s + '\n' + '-'*len(s)
 
             dataD['version'] = self.version
             dataD['author'] = self.author
@@ -494,7 +501,8 @@ class Hatch(object):
             # Make sphinx doc files
             for fname in ['index.rst', 'Makefile', 'fulltoc.py', 'functions.rst',
                           'conf.py', 'sphinxy.py', 'keyboard_hit.py', 'make.bat',
-                          'history.rst', 'build_all_html.py', 'authors.rst']:
+                          'history.rst', 'build_all_html.py', 'authors.rst',
+                          'quickstart.rst']:
                 s = get_file_template( DOC_TEMPLATE_DIR, fname, dataD )
                 create_file( docsDir, fname, contents=s )
 

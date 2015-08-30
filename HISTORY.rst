@@ -6,6 +6,10 @@ History
 GitHub Log
 ----------
 
+* Aug 30, 2015
+    - (by: sonofeft) 
+        - Version 0.0.6
+            Added AUTHORS.rst, fixed history script bug, and link error
 * Aug 29, 2015
     - (by: sonofeft) 
         - fixed doc error on PyHatch.cfg location

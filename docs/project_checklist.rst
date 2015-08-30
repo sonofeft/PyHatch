@@ -34,10 +34,21 @@ Before You Start Programming
     * on Bitbucket_ (see `<https://bitbucket.org/>`_)
         - Bitbucket_ appears to have fewer features than GitHub_.
         - documentation is often just the README.rst file, there is no direct access to  :ref:`internal_travis_ci` or :ref:`internal_read_the_docs`
+        
 #. Run ``PyHatch`` to create the project folder and supporting files
     * Use the URL for either GitHub or Bitbucket project as ``project url`` in pyhatch GUI.
         - If using ReadTheDocs, you might want to use the ReadTheDocs url in pyhatch GUI.
-    * Optionally create ``examples`` subdirectory
+    * Optionally delete ``examples`` subdirectory
+        - PyHatch creates an ``examples`` subdirectory that you may choose not to use.
+    * Optionally create a new ``logo`` image file (PNG, GIF, JPEG, etc.)
+        - PyHatch creates a logo called ``PythonSphinxlogo.png`` located in the /docs/_static subdirectory
+        - The current logo is a 202x61 pixel Sphinx logo with a white background color. An image file of similar characteristics would work well in the Sphinx-generated HTML pages.
+        - To change the logo, look in the file ``/docs/conf.py`` and change the line::
+        
+            html_logo = "./_static/PythonSphinxlogo.png"
+                  to
+            html_logo = "./_static/<your new image file name>"
+    
 #. Register yourself with PyPI (If you haven't already)
     * See https://pypi.python.org/pypi?%3Aaction=register_form to get a username and password
 
