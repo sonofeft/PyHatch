@@ -341,8 +341,6 @@ class Hatch(object):
 
             s = self.projName + " Code Functions"
             dataD['projCode_rst'] = s + '\n' + '='*len(s)
-            s = self.projName + " Authors"
-            dataD['authors_rst'] = s + '\n' + '='*len(s)
 
             s = self.projName + " Code Functions"
             dataD['projCode_rst'] = s + '\n' + '='*len(s)

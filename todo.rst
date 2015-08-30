@@ -3,6 +3,8 @@
 TODO List
 =========
 
+* Add option for console shortcut 
+    - (i.e. entry_points/console_scripts in setup.py)
 
 * Add tags to GitHub for version changes???
     git tag -a v1.4 -m 'my version 1.4'

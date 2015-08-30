@@ -23,7 +23,9 @@ Installation From Source
 ------------------------
 
 Much less common, but if installing from source, then
-the best way to install {{projName_lower}} is to use pip after navigating to the directory holding {{projName_lower}} source code::
+the best way to install {{projName_lower}} is still ``pip``.
+
+After navigating to the directory holding {{projName}} source code, do the following::
 
     cd full/path/to/{{projName_lower}}
     pip install -e .
@@ -37,7 +39,7 @@ This will execute the local ``setup.py`` file and insure that the pip-specific c
 
 {{running_projName_rst}}
 
-After installing with pip, there will be a launch command line program called **{{projName_lower}}** or, on Windows, **{{projName_lower}}.exe**. From a terminal or command prompt window simply type::
+After installing with ``pip``, there will be a launch command line program called **{{projName_lower}}** or, on Windows, **{{projName_lower}}.exe**. From a terminal or command prompt window simply type::
 
     {{projName_lower}}
 
@@ -58,9 +60,9 @@ Make sure your system path includes the above path to **{{projName_lower}}**.
 pip Error Messages
 ------------------
 
-If you get an error message that ``pip`` is not found, see `<https://pip.pypa.io/en/latest/installing.html>`_ for full description of pip installation.
+If you get an error message that ``pip`` is not found, see `<https://pip.pypa.io/en/latest/installing.html>`_ for full description of ``pip`` installation.
 
-There might be issues with pip failing on Linux with a message like::
+There might be issues with ``pip`` failing on Linux with a message like::
 
 
     InsecurePlatformWarning
