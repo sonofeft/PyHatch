@@ -40,12 +40,12 @@ Before You Start Programming
         - If using ReadTheDocs, you might want to use the ReadTheDocs url in pyhatch GUI.
     * Optionally delete ``examples`` subdirectory
         - PyHatch creates an ``examples`` subdirectory that you may choose not to use.
-    * Optionally create a new ``logo`` image file (PNG, GIF, JPEG, etc.)
-        - PyHatch creates a logo called ``PythonSphinxlogo.png`` located in the /docs/_static subdirectory
-        - The current logo is a 202x61 pixel Sphinx logo with a white background color. An image file of similar characteristics would work well in the Sphinx-generated HTML pages.
+    * Optionally create a new ``logo`` image file (PNG, GIF, JPEG, SVG, etc.)
+        - PyHatch creates a logo called ``generic_logo.svg`` located in the /docs/_static subdirectory
+        - The current logo is a 210x62 pixel SVG file. An image file of similar characteristics would work well in the Sphinx-generated HTML pages.
         - To change the logo, look in the file ``/docs/conf.py`` and change the line::
         
-            html_logo = "./_static/PythonSphinxlogo.png"
+            html_logo = "./_static/generic_logo.svg"
                   to
             html_logo = "./_static/<your new image file name>"
     

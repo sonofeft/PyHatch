@@ -2,8 +2,8 @@
 
 .. _internal_making_history:
 
-Making History
-==============
+Making History.rst
+==================
 
 The history (i.e. Changelog) of a project created by PyHatch is displayed on the project's ``History`` page. 
 

@@ -117,11 +117,9 @@ import platform
 try:
     from pyhatch.fill_template import get_file_template
     from pyhatch.license_templates import LICENSE_D, HEADER_D, CLASSIFIER_D
-    from pyhatch.pySphinxLogo import save_logo_to_file
 except:
     from fill_template import get_file_template
     from license_templates import LICENSE_D, HEADER_D, CLASSIFIER_D
-    from pySphinxLogo import save_logo_to_file
 
 # Code goes below.
 #
@@ -504,8 +502,13 @@ class Hatch(object):
                 s = get_file_template( DOC_TEMPLATE_DIR, fname, dataD )
                 create_file( docsDir, fname, contents=s )
 
-            logoName = os.path.join( docsStaticDir, 'PythonSphinxlogo.png' )
-            save_logo_to_file( logoName, in_test_mode=self.in_test_mode )
+            
+            s = get_file_template( DOC_TEMPLATE_DIR, 'generic_logo.svg', dataD )
+            create_file( docsStaticDir, 'generic_logo.svg', contents=s )
+            
+            
+            #logoName = os.path.join( docsStaticDir, 'PythonSphinxlogo.png' )
+            #save_logo_to_file( logoName, in_test_mode=self.in_test_mode )
 
             return 'Success'
 
