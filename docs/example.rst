@@ -52,17 +52,16 @@ PyHatch GUI
 
 Another approach to creating a project is to simply type ``pyhatch`` in a terminal and the ``PyHatch GUI`` will start.  Fill in the information, select a target directory and click ``Build Project``.
 
+
+.. image:: _static/pyhatch_gui.png
+
+
 .. note::
     Saving a Hatch object creates a ``PyHatch.cfg`` file in the user's home directory.  
     
     Once the ``PyHatch.cfg`` file exists the personal information on the ``PyHatch GUI`` will be filled in automatically.
 
-
 It is also possible to run the ``PyHatch GUI`` directly from source without installing it. Simply navigate to the source files and type::
 
     python hatch_gui.py
-
-
-
-.. image:: _static/pyhatch_gui.png
 

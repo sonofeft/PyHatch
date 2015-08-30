@@ -3,6 +3,12 @@
 TODO List
 =========
 
+* A copyright page
+
+* Strip trailing spaces in all template files.
+
+* Create SVG or PNG logo file 
+
 * Add option for console shortcut 
     - (i.e. entry_points/console_scripts in setup.py)
 

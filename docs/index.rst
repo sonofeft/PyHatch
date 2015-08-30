@@ -14,6 +14,7 @@ Contents:
    project_checklist
    new_github_proj
    pip
+   making_history
    pypirc
    project_layout
    read_the_docs
@@ -22,8 +23,8 @@ Contents:
    pylint
    fulltable_of_contents
    functions
+   copyright
    authors
-   making_history
    history
 
 

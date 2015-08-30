@@ -16,7 +16,7 @@ Patches and Ideas
 Initial Project Layout
 ----------------------
 
-{{projName}} Framework Created by: `PyHatch <http://pyhatch.readthedocs.org/en/latest/>`_ 
+{{projName}} Framework was Created by: `PyHatch <http://pyhatch.readthedocs.org/en/latest/>`_ 
 
 (PyHatch Initializes Files And Directory Structures For New Python Projects.)
 

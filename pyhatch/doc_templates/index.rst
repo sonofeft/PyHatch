@@ -15,6 +15,7 @@ Contents:
 
    quickstart
    functions
+   copyright
    authors
    history
 

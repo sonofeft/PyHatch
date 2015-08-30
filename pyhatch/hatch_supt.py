@@ -500,7 +500,7 @@ class Hatch(object):
             for fname in ['index.rst', 'Makefile', 'fulltoc.py', 'functions.rst',
                           'conf.py', 'sphinxy.py', 'keyboard_hit.py', 'make.bat',
                           'history.rst', 'build_all_html.py', 'authors.rst',
-                          'quickstart.rst']:
+                          'quickstart.rst', 'copyright.rst']:
                 s = get_file_template( DOC_TEMPLATE_DIR, fname, dataD )
                 create_file( docsDir, fname, contents=s )
 

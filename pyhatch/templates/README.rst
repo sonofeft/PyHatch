@@ -1,6 +1,7 @@
-   
-.. image:: https://img.shields.io/travis/{{github_user_name}}/{{projName}}.svg
-        :target: https://travis-ci.org/{{github_user_name}}/{{projName}}
+
+
+.. image:: https://travis-ci.org/{{github_user_name}}/{{projName}}.svg?branch=master
+    :target: https://travis-ci.org/{{github_user_name}}/{{projName}}
 
 .. image:: https://img.shields.io/pypi/v/{{projName}}.svg
     :target: https://pypi.python.org/pypi/{{projName_lower}}

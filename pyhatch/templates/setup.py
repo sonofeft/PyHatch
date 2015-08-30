@@ -9,7 +9,7 @@ the best way to install {{projName}} is to use pip after navigating to the sourc
 
     cd <path to where setup.py is located>
     pip install -e .
-    
+
 This will execute the setup.py file and insure that its pip-specific commands are run.
 
 """
@@ -48,7 +48,7 @@ setup(
 
     # The project's main homepage.
     url='http://{{projName_lower}}.readthedocs.org/en/latest/',
-    download_url='https://github.com/{{github_user_name}}/{{projName}}',    
+    download_url='https://github.com/{{github_user_name}}/{{projName}}',
 
     # Author details
     author = '{{author}}',
@@ -88,7 +88,7 @@ setup(
     packages = find_packages(exclude=['.tox', '.hg', 'docs']),
 
     # List run-time dependencies here.  These will be installed by pip when
-    # your project is installed. 
+    # your project is installed.
     install_requires = requires,  # read from requirements.txt
 
     tests_require = ['nose','coverage'], # ...OR... ['pytest','pytest-cov']
@@ -102,13 +102,13 @@ setup(
         'dev': ['check-manifest'],
         'test': ['coverage'],
     },
-    
+
     zip_safe= False,
 
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # pip to create the appropriate form of executable for the target platform.
-    
+
     #entry_points = {
     #    'console_scripts': [
     #        '{{projName_lower}}={{projName_lower}}.main:main',
