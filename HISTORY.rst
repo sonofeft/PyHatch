@@ -6,8 +6,13 @@ History
 GitHub Log
 ----------
 
+* Aug 31, 2015
+    - (by: sonofeft) 
+        - Cosmetic tweek to generic_log.svg file
 * Aug 30, 2015
     - (by: sonofeft) 
+        - Added Generic SVG Logo
+        - Updated HISTORY.rst by running history_from_github_api.py
         - Version 0.0.8
             Added copyright page to docs.
         - Version 0.0.7
