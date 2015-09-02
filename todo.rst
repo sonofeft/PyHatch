@@ -3,6 +3,13 @@
 TODO List
 =========
 
+* Make script to publish
+    - update version
+    - make history file
+    - register with PyPI
+    - upload to PyPI
+    - commit to GitHub as version x.x.x
+
 * Strip trailing spaces in all template files.
 
 * Add option for console shortcut 

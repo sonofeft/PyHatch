@@ -3,6 +3,8 @@
 Authors
 =======
 
+Thank you for supporting {{projName}}.
+
 Development Lead
 ----------------
 

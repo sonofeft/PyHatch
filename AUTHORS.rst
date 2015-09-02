@@ -1,7 +1,9 @@
 
 
-PyHatch Authors
-===============
+Authors
+=======
+
+Thank you for supporting PyHatch.
 
 Development Lead
 ----------------

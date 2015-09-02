@@ -8,6 +8,8 @@ GitHub Log
 
 * Aug 31, 2015
     - (by: sonofeft) 
+        - Version 0.0.9
+            Updated HISTORY.rst
         - Cosmetic tweek to generic_log.svg file
 * Aug 30, 2015
     - (by: sonofeft) 
