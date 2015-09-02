@@ -8,6 +8,9 @@ GitHub Log
 
 * Sep 02, 2015
     - (by: sonofeft) 
+        - Version 0.0.13
+            package_data needed to be added for templates
+        - History update
         - Version 0.0.10
 * Aug 31, 2015
     - (by: sonofeft) 
