@@ -37,13 +37,16 @@ def html_page_context(app, pagename, templatename, context, doctree):
     context['toc'] = rendered_toc
     context['display_toc'] = True  # force toctree to display
 
-    def make_toctree(collapse=True):
-        return get_rendered_toctree(app.builder,
-                                    pagename,
-                                    prune=False,
-                                    collapse=collapse,
-                                    )
-    context['toctree'] = make_toctree
+    # Commented out the following on Sept 5, 2015 (sonofeft)
+    #   On ReadTheDocs it was causing:
+    #  "TypeError: <function make_toctree at 0x7f200cb11b90> is not JSON serializable"
+    #def make_toctree(collapse=True):
+    #    return get_rendered_toctree(app.builder,
+    #                                pagename,
+    #                                prune=False,
+    #                                collapse=collapse,
+    #                                )
+    #context['toctree'] = make_toctree
 
 
 def get_rendered_toctree(builder, docname, prune=False, collapse=True):

@@ -37,13 +37,35 @@ My baseline .travis.yml file seemed to work just fine::
         - "3.4"
 
     install:
-        - pip install -r requirements.txt --use-mirrors
+        - pip install -r requirements.txt
     script:
         - py.test
     
 I recieved an email after synching the file with GitHub that the above tests were successfully run.
 
 Note that I have ``Travis CI`` set up to run ``py.test`` whereas I set up ``TOX`` to run ``nosetests``. Feel free to change them around to your test suite of choice.
+
+Using apt-get
+-------------
+
+It may be necessary to add packages to Travis CI via ``apt-get`` for your project to work.  
+If so, in your your .travis.yml file try something like::
+
+    before_install:
+        - sudo apt-get install python-matplotlib
+        - sudo apt-get install python-numpy
+        - sudo apt-get install python-scipy
+
+Module import Errors
+--------------------
+
+You may get messages such as: `Failure: ImportError (No module named <Some Module Name>)`
+
+If so try adding the following to your .travis.yml file::
+    
+    virtualenv:
+        system_site_packages: true
+
 
 .. _internal_travis_ci_wrinkle:
 

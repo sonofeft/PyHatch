@@ -63,6 +63,52 @@ when you push to GitHub.
 #. All done.  Commit away and your project will auto-update.
 
 
+Mock Modules
+------------
+
+ReadTheDocs may need to mock certain module imports in order for sphinx to build the project.
+Add the snippet below to your ``conf.py`` file where ``MOCK_MODULES`` is replaced with your list of modules::
+
+    import sys
+    if sys.version_info < (3,):
+        from mock import Mock as MagicMock
+    else:
+        from unittest.mock import MagicMock # added to unittest in python 3.3
+
+    class Mock(MagicMock):
+        @classmethod
+        def __getattr__(cls, name):
+                return Mock()
+
+    MOCK_MODULES = ['pygtk', 'gtk', 'gobject', 'argparse', 'numpy', 'pandas']
+    sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
+
+.. note::
+
+    For python2.7, MagicMock will need to be installed.
+    Excute the ``pip install mock`` by including mock in your requirements.txt file
+
+In the setup.py file you may need::
+
+    on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+    if on_rtd:
+        if sys.version_info < (3,3):
+            requires = ['mock']  # for python2 and python < 3.3
+        else:
+            requires = []  # for >= python3.3
+        
+    else:
+        # Place install_requires into the text file "requirements.txt"
+        with open(os.path.join(here, 'requirements.txt'), encoding='utf-8') as f2:
+            requires = f2.read().strip().splitlines()
+
+.. note::
+    
+    You may also need to check the box on ReadTheDocs advanced options.
+    
+    Use system packages:
+       Give the virtual environment access to the global site-packages dir.
+
 Using Sphinx extensions
 -----------------------
 
