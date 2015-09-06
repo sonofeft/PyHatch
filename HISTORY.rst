@@ -6,8 +6,15 @@ History
 GitHub Log
 ----------
 
+* Sep 06, 2015
+    - (by: sonofeft) 
+        - Version 0.0.14
+        - removed make_toctree from fulltoc.py
+            Added some mock module logic to read_the_docs.rst
+            Added some apt-get logic to travis_ci.rst
 * Sep 02, 2015
     - (by: sonofeft) 
+        - History update
         - Version 0.0.13
             package_data needed to be added for templates
         - History update
