@@ -6,8 +6,14 @@ History
 GitHub Log
 ----------
 
+* Sep 08, 2015
+    - (by: sonofeft) 
+        - version 0.0.15
+            Tweeked history.rst
+            Fixed examples subdirectory install
 * Sep 06, 2015
     - (by: sonofeft) 
+        - Update HISTORY.rst
         - Version 0.0.14
         - removed make_toctree from fulltoc.py
             Added some mock module logic to read_the_docs.rst
