@@ -83,7 +83,8 @@ setup(
     keywords = 'pyhatch setuptools development',
 
     packages = find_packages(exclude=['.tox', '.hg', 'docs']),
-    package_data = {'pyhatch':['templates/*.*', 'templates/.*', 'doc_templates/*.*', 'doc_templates/Makefile']},
+    package_data = {'pyhatch':['templates/*.*', 'templates/.*', 'examples/*.*',
+                    'doc_templates/*.*', 'doc_templates/Makefile']},
 
     # List run-time dependencies here.  These will be installed by pip when
     # your project is installed. 

@@ -4,7 +4,8 @@
 .. include:: ../HISTORY.rst
 
 
-------
+PyHatch
+-------
 
 {{projName}} Framework Created by: `PyHatch <http://pyhatch.readthedocs.org/en/latest/>`_ on {{date_str}} 
 
