@@ -56,3 +56,6 @@ docs/_build/
 # PyBuilder
 target/
 pyhatch/PyHatch.cfg
+pyhatch/templates/history_from_github_api.py.bak
+docs/_static/pyhatch.pov.bak
+docs/_static/pyhatch.pov.bak

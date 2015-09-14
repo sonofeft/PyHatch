@@ -56,7 +56,7 @@ light_source {
 
 #declare Text_Tex = texture {
   pigment { OrangeRed  }
-  finish { specular 0.5 ambient 0.4 + 0.1*clock*(clock-1)  }        
+  finish { specular 0.3 ambient 0.2  }        
 }
 
 

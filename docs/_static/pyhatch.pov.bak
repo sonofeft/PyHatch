@@ -8,7 +8,8 @@
 
 #version 3.7;      
 
-#include "glass.inc"                       
+#include "glass.inc"
+#include "colors.inc"                       
 
 #declare BackColv1 = rgb <.1255,.29,.5294>;
 #declare BackCol = rgb <1,1,1>;
@@ -54,7 +55,7 @@ light_source {
 // ----------------------------------------
 
 #declare Text_Tex = texture {
-  pigment { Col_Ruby  }
+  pigment { OrangeRed  }
   finish { specular 0.5 ambient 0.4 + 0.1*clock*(clock-1)  }        
 }
 
