@@ -81,7 +81,13 @@ Or to the testpypi server with::
     python setup.py register -r testpypi
     python setup.py sdist bdist_wininst upload -r testpypi
 
+
+.. warning::
+
+    The following is the **OLD** way of defining a **.pypirc** file.
+
 The default file, created by PyHatch, is shown below::
+
 
     [distutils]
     index-servers=
@@ -97,6 +103,14 @@ The default file, created by PyHatch, is shown below::
     repository = https://pypi.python.org/pypi
     username = <your production user name goes here>
     password = <your production password goes here>
+
+.. warning::
+
+    The above is the **OLD** way of defining a **.pypirc** file.
+
+.. _New PyPi Upload: https://packaging.python.org/guides/migrating-to-pypi-org/#uploading
+
+The new format is described at `New PyPi Upload`_
 
 If you want to use this approach, then edit **.pypirc** to contain your username and password.
 

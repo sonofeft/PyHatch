@@ -1,3 +1,6 @@
+
+__version__ = '{{version}}'  # METADATA_RESET:__version__ = '<<version>>'
+
 """
 The ``_version.py`` file can be executed with execfile to create a local variable __version__::
 
@@ -10,4 +13,3 @@ Used to set version info throughout the project.
 
 ------
 """
-__version__ = '{{version}}'  # METADATA_RESET:__version__ = '<<version>>'

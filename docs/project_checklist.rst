@@ -13,6 +13,7 @@ New Project Checklist
 .. _GitHub: https://github.com/
 .. _PyPI: https://pypi.python.org/pypi
 .. _twine: https://pypi.python.org/pypi/twine
+.. _Twine: https://pypi.python.org/pypi/twine
 .. _sphinx: http://sphinx-doc.org/
 .. _tk_nosy: http://tk_nosy.readthedocs.org/en/latest/
 
@@ -149,6 +150,10 @@ Upload to PyPI (or testPyPI)
 #. Create ``wheel`` for upload to PyPI
     * ``python setup.py sdist bdist_wheel``
 
+.. warning::
+
+    Twine_ is now the preferred way to register and upload projects. The following ``setup.py`` approach has been abandoned.
+
 #. If twine_ is not available or if you are on Windows (Windows version is buggy right now) upload your package to PyPI_ as follows::
 
     python setup.py register -r pypi
@@ -159,6 +164,10 @@ Upload to PyPI (or testPyPI)
     python setup.py register -r testpypi
     python setup.py sdist bdist_wheel upload -r testpypi
 
+
+.. note::
+
+    Twine_ is now the preferred way to register and upload projects.
 
 #. If twine_ is available (it's more secure than setup.py upload) and your ``.pypirc`` file is properly located and formatted, then try to upload package to PyPI_ using::
 
