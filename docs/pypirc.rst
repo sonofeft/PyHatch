@@ -49,7 +49,7 @@ The distutils command ``upload`` pushes the distribution files to PyPI.
 The command is invoked immediately after building one or more distribution
 files.  For example, the command ::
 
-    python setup.py sdist bdist_wininst upload
+    python setup.py sdist bdist_wheel upload
 
 will cause the source distribution and the Windows installer to be uploaded to
 PyPI.  Note that these will be uploaded even if they are built using an earlier
@@ -71,15 +71,15 @@ The **.pypirc** file will allow the **-r** option with ``register`` and ``upload
 When properly installed you can register and upload to PyPI with the commands::
 
     python setup.py register
-    python setup.py sdist bdist_wininst upload
+    python setup.py sdist bdist_wheel upload
             (same as)
     python setup.py register -r pypi
-    python setup.py sdist bdist_wininst upload -r pypi
+    python setup.py sdist bdist_wheel upload -r pypi
     
 Or to the testpypi server with::
             
     python setup.py register -r testpypi
-    python setup.py sdist bdist_wininst upload -r testpypi
+    python setup.py sdist bdist_wheel upload -r testpypi
 
 
 .. warning::
