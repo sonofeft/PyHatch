@@ -104,8 +104,11 @@ if sys.version_info < (3,):
     text = unicode
 else:
     from builtins import str as text  # for python 2/3 unicode issues
+try:
+    import configparser
+except:
+    import ConfigParser as configparser
 
-import configparser
 import stat
 import datetime
 from io import StringIO
