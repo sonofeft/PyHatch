@@ -152,7 +152,7 @@ Upload to PyPI (or testPyPI)
 
 .. warning::
 
-    Twine_ is now the preferred way to register and upload projects. The following ``setup.py`` approach has been abandoned.
+    Twine_ is now the preferred way to register and upload projects. The following ``setup.py`` approach has been abandoned for python versions < 2.7.13
 
 #. If twine_ is not available or if you are on Windows (Windows version is buggy right now) upload your package to PyPI_ as follows::
 
@@ -167,7 +167,7 @@ Upload to PyPI (or testPyPI)
 
 .. note::
 
-    Twine_ is now the preferred way to register and upload projects.
+    Twine_ is now the preferred way to register and upload projects for python version < 2.7.13
 
 #. If twine_ is available (it's more secure than setup.py upload) and your ``.pypirc`` file is properly located and formatted, then try to upload package to PyPI_ using::
 
