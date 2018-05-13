@@ -9,7 +9,7 @@ GitHub Log
 * Sep 08, 2015
     - (by: sonofeft) 
         - version 0.0.15
-            Tweeked history.rst
+            Tweaked history.rst
             Fixed examples subdirectory install
 * Sep 06, 2015
     - (by: sonofeft) 
@@ -29,7 +29,7 @@ GitHub Log
     - (by: sonofeft) 
         - Version 0.0.9
             Updated HISTORY.rst
-        - Cosmetic tweek to generic_log.svg file
+        - Cosmetic tweak to generic_log.svg file
 * Aug 30, 2015
     - (by: sonofeft) 
         - Added Generic SVG Logo
@@ -39,7 +39,7 @@ GitHub Log
         - Version 0.0.7
             Cleaned up history.rst and authors.rst as well as quickstart template
         - Added Quickstart page to docs
-            Added logo changeout instructions.
+            Added logo change out instructions.
             Added PyHatch links to history.rst page.
         - Version 0.0.6
             Added AUTHORS.rst, fixed history script bug, and link error
@@ -57,7 +57,7 @@ GitHub Log
             Sphinx docs.  Also added build_all_html.py in /docs/ subdirectory to
             ``touch`` all rst files such that sphinx will rebuild the whole site.
         - Update docs and tox
-            Lots of tweeks to new project checklist and quickstart as well as adding
+            Lots of tweaks to new project checklist and quickstart as well as adding
             coverage to tox.ini and tox.ini templates
 * Aug 27, 2015
     - (by: sonofeft) 

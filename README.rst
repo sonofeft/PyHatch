@@ -90,7 +90,7 @@ and test driven development.
 
 Notice that a configuration file (PyHatch.cfg) is created in the users home 
 directory.  That configuration file holds project and personal data that
-will help autofill the PyHatch GUI the second time tht PyHatch is used.
+will help autofill the PyHatch GUI the second time that PyHatch is used.
 
 
 See the Code at: `<https://github.com/sonofeft/PyHatch>`_

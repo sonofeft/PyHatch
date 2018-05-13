@@ -102,7 +102,7 @@ The Programming Cycle
 
 
 #. In addition to the :ref:`internal_pylint` already run on your code, consider running `cheesecake <https://github.com/griggheo/cheesecake>`_ to verify your code's "readiness".
-    * `Cheesecake <https://github.com/griggheo/cheesecake>`_ is more demanding and makes more value judgements than  :ref:`internal_pylint`.
+    * `Cheesecake <https://github.com/griggheo/cheesecake>`_ is more demanding and makes more value judgments than  :ref:`internal_pylint`.
 
 
 Upload to PyPI (or testPyPI)

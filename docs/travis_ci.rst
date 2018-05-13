@@ -41,7 +41,7 @@ My baseline .travis.yml file seemed to work just fine::
     script:
         - py.test
     
-I recieved an email after synching the file with GitHub that the above tests were successfully run.
+I received an email after syncing the file with GitHub that the above tests were successfully run.
 
 Note that I have ``Travis CI`` set up to run ``py.test`` whereas I set up ``TOX`` to run ``nosetests``. Feel free to change them around to your test suite of choice.
 

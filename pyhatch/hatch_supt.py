@@ -474,6 +474,7 @@ class Hatch(object):
             place_template_file( projDir, 'setup.py' )
             place_template_file( projDir, 'history_from_github_api.py')
             place_template_file( projDir, 'metadata_reset.py' )
+            place_template_file( projDir, 'UPLOAD_TO_PyPI.BAT' )
 
             place_template_file( projDir, '.pypirc' )
             #place_template_file( projDir, 'tk_nosy.py' )
@@ -501,7 +502,8 @@ class Hatch(object):
             for fname in ['index.rst', 'Makefile', 'fulltoc.py', 'functions.rst',
                           'conf.py', 'sphinxy.py', 'keyboard_hit.py', 'make.bat',
                           'history.rst', 'build_all_html.py', 'authors.rst',
-                          'quickstart.rst', 'copyright.rst']:
+                          'quickstart.rst', 'copyright.rst',
+                          'spelling_correct_wordlist.txt','spell_check.bat']:
                 s = get_file_template( DOC_TEMPLATE_DIR, fname, dataD )
                 create_file( docsDir, fname, contents=s )
 

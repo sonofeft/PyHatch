@@ -51,6 +51,21 @@ extensions = [
     'fulltoc'
 ]
 
+#if os.environ.get('READTHEDOCS') != 'True':
+try:
+    import sphinxcontrib.spelling # if it fails on RTD or local, all is good.
+    spelling_ignore_pypi_package_names=True
+    spelling_ignore_python_builtins=True
+    spelling_show_suggestions=True
+    spelling_word_list_filename='spelling_correct_wordlist.txt'
+    extensions.append( 'sphinxcontrib.spelling' )
+except:
+    print( '='*55 )
+    print( "         Spell Check NOT Available" )
+    print( "         To Enable, install with:" )
+    print( "pip install sphinxcontrib-spelling" )
+    print( '='*55 )
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 

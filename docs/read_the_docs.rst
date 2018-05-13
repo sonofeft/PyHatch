@@ -86,7 +86,7 @@ Add the snippet below to your ``conf.py`` file where ``MOCK_MODULES`` is replace
 .. note::
 
     For python2.7, MagicMock will need to be installed.
-    Excute the ``pip install mock`` by including mock in your requirements.txt file
+    Execute the ``pip install mock`` by including mock in your requirements.txt file
 
 In the setup.py file you may need::
 

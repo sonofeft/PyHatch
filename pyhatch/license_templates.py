@@ -22,6 +22,18 @@ CLASSIFIER_D["CDDL-1.0"] = "License :: OSI Approved :: Common Public License"
 CLASSIFIER_D["EPL-1.0"] = "License :: OSI Approved"
 CLASSIFIER_D["Apache-2.0"] = "License :: OSI Approved :: Apache Software License"
 CLASSIFIER_D["GPL-3"] = "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
+CLASSIFIER_D["Proprietary"] = "License :: Company Proprietary"
+
+HEADER_D["Proprietary"] = '''Copyright (C) {company_name} - All Rights Reserved
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential.
+'''
+
+LICENSE_D["Proprietary"] = '''Company Proprietary License.
+
+Copyright (C) {company_name} - All Rights Reserved
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential.'''
 
 HEADER_D["Apache-2.0"] = '''Copyright %(year)s %(organization)s
 

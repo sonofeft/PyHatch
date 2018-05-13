@@ -15,7 +15,7 @@ When you run Pylint_, remember that what it recommends is not to be taken as gos
  
 will disable the pylint warning message C0321 ("more than one statement on a single line").
 
-In my opinion, the greatest benefit of Pylint_ is to simply draw your attention to a questionable piece of code and make you think about it. Each *disable* comment is a testament to the fact that your judgement is better than some rigid set of guidelines.
+In my opinion, the greatest benefit of Pylint_ is to simply draw your attention to a questionable piece of code and make you think about it. Each *disable* comment is a testament to the fact that your judgment is better than some rigid set of guidelines.
 
 Check out `Pylint Documentation`_ for further documentation.
 

@@ -3,6 +3,8 @@
 TODO List
 =========
 
+* DONE...Add proprietary license to pyhatch_gui.py
+
 * Add tox/pip setup advice from:
     - http://blog.ionelmc.ro/2015/01/02/speedup-pip-install/
         Per-user:
