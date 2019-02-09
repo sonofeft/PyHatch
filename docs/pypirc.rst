@@ -10,34 +10,14 @@ Before you can ``upload`` a project to PyPI, you need to ``register`` it.
 The register command
 --------------------
 
-The distutils command ``register`` is used to submit your distribution's
+DEPRECATED
+
+The distutils command ``register`` is NO LONGER USED
+to submit your distribution's
 meta-data to an index server as follows::
 
     python setup.py register
-
-Distutils will respond with the following prompt::
-
-    running register
-    We need to know who you are, so please choose either:
-        1. use your existing login,
-        2. register as a new user,
-        3. have the server generate a new password for you (and email it to you), or
-        4. quit
-    Your selection [default 1]:
-
-Note: if your username and password are saved locally, you will not see this
-menu.  see :ref:`package_pypirc` below.
-
-If you have not registered with PyPI, then you will need to do so now. You
-should choose option 2, and enter your details as required. Soon after
-submitting your details, you will receive an email which will be used to confirm
-your registration.
-
-Once you are registered, you may choose option 1 from the menu. You will be
-prompted for your PyPI username and password, and ``register`` will then
-submit your meta-data to the index.
-
-
+    (NO LONGER REQUIRED)
 
 .. _package-upload:
 
