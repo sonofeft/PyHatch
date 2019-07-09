@@ -10,7 +10,9 @@ Before you can ``upload`` a project to PyPI, you need to ``register`` it.
 The register command
 --------------------
 
-DEPRECATED
+.. note:: 
+
+    register command is DEPRECATED
 
 The distutils command ``register`` is NO LONGER USED
 to submit your distribution's
@@ -24,22 +26,47 @@ meta-data to an index server as follows::
 The upload command
 ------------------
 
-The distutils command ``upload`` pushes the distribution files to PyPI.
+.. note:: 
 
-The command is invoked immediately after building one or more distribution
-files.  For example, the command ::
+    upload command is DEPRECATED
+    use twine to upload packages
 
-    python setup.py sdist bdist_wheel upload
+Formerly, the distutils command ``upload`` pushed the distribution files to PyPI.
+
+Twine is now the preferred method.
+
+twine
+-----
+
+Twine is a utility for interacting with PyPI, that offers a secure replacement for setup.py upload.
+
+For any changes in upload procedure see: 
+`Uploading the distribution archives <https://packaging.python.org/tutorials/packaging-projects/>`_
+
+Twine can be installed with::
+
+    python  -m pip install --user --upgrade twine
+    ...OR...
+    python3 -m pip install --user --upgrade twine
+
+Once installed, run Twine to upload all of the archives under dist::
+
+    python  -m twine upload dist/*
+    ...OR...
+    python3 -m twine upload dist/*
+
+
+The command is normally invoked immediately after building one or more distribution
+files.  For example, the commands ::
+
+    python setup.py sdist bdist_wheel
+    python -m twine upload dist/*
 
 will cause the source distribution and the Windows installer to be uploaded to
 PyPI.  Note that these will be uploaded even if they are built using an earlier
 invocation of :file:`setup.py`, but that only distributions named on the command
 line for the invocation including the ``upload`` command are uploaded.
 
-If a ``register`` command was previously called in the same command,
-and if the password was entered in the prompt, ``upload`` will reuse the
-entered password.  This is useful if you do not want to store a password in
-clear text in a :file:`.pypirc` file.
 
 .. _package_pypirc:
 
