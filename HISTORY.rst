@@ -6,10 +6,35 @@ History
 GitHub Log
 ----------
 
+* Jul 09, 2019
+    - (by: sonofeft) 
+        - version 0.0.19 dropped python 3.3 and 3.4 support
+        - fixed Travis CI for python 3.4 and added spell check notes
+        - Add Twine documentation for project upload
+* Feb 09, 2019
+    - (by: sonofeft) 
+        - depricated register command
+* May 13, 2018
+    - (by: sonofeft) 
+        - Added Spell Checking
+* Jul 13, 2017
+    - (by: sonofeft) 
+        - doc tweek
+* Jul 03, 2017
+    - (by: sonofeft) 
+        - fixed  ConfigParser  import for python 2.7
+        - changed "bdist_wininst" to "bdist_wheel" in setup.py upload command
+        - Added some changes due to time passage (Twine, python versions)
+* Sep 14, 2015
+    - (by: sonofeft) 
+        - History api change and logo PNG change
+            Can now hand edit HISTORY.rst file and history_from_github_api.py will
+            keep hand edits untouched, only adding new GitHub commits to HISTORY.rst
 * Sep 08, 2015
     - (by: sonofeft) 
+        - updated history
         - version 0.0.15
-            Tweaked history.rst
+            Tweeked history.rst
             Fixed examples subdirectory install
 * Sep 06, 2015
     - (by: sonofeft) 
@@ -29,7 +54,7 @@ GitHub Log
     - (by: sonofeft) 
         - Version 0.0.9
             Updated HISTORY.rst
-        - Cosmetic tweak to generic_log.svg file
+        - Cosmetic tweek to generic_log.svg file
 * Aug 30, 2015
     - (by: sonofeft) 
         - Added Generic SVG Logo
@@ -39,7 +64,7 @@ GitHub Log
         - Version 0.0.7
             Cleaned up history.rst and authors.rst as well as quickstart template
         - Added Quickstart page to docs
-            Added logo change out instructions.
+            Added logo changeout instructions.
             Added PyHatch links to history.rst page.
         - Version 0.0.6
             Added AUTHORS.rst, fixed history script bug, and link error
@@ -56,24 +81,3 @@ GitHub Log
             Included all the scripts and templates to make a History page in the
             Sphinx docs.  Also added build_all_html.py in /docs/ subdirectory to
             ``touch`` all rst files such that sphinx will rebuild the whole site.
-        - Update docs and tox
-            Lots of tweaks to new project checklist and quickstart as well as adding
-            coverage to tox.ini and tox.ini templates
-* Aug 27, 2015
-    - (by: sonofeft) 
-        - After pylint
-* Aug 26, 2015
-    - (by: sonofeft) 
-        - Added Example Usage, Made GUI Smaller
-* Aug 25, 2015
-    - (by: sonofeft) 
-        - Fixed broken tox
-            Moving PyHatch.cfg to user home directory and adding image shields to
-            README.rst broke tox
-        - added generic img shields
-        - fixed "python setup.py test"
-        - doc and version cleanup
-* Aug 23, 2015
-    - (by: sonofeft) 
-        - fixed setup.py
-        - first commit of existing code base
