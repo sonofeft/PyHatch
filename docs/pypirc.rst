@@ -38,18 +38,18 @@ Twine is now the preferred method.
 twine
 -----
 
-Twine is a utility for interacting with PyPI, that offers a secure replacement for setup.py upload.
+`Twine <https://pypi.org/project/twine/>`_ is a utility for interacting with PyPI, that offers a secure replacement for setup.py upload.
 
 For any changes in upload procedure see: 
 `Uploading the distribution archives <https://packaging.python.org/tutorials/packaging-projects/>`_
 
-Twine can be installed with::
+`Twine <https://pypi.org/project/twine/>`_ can be installed with::
 
     python  -m pip install --user --upgrade twine
     ...OR...
     python3 -m pip install --user --upgrade twine
 
-Once installed, run Twine to upload all of the archives under dist::
+Once installed, run `Twine <https://pypi.org/project/twine/>`_ to upload all of the archives under dist::
 
     python  -m twine upload dist/*
     ...OR...
