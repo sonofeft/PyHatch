@@ -49,9 +49,20 @@ import glob
 import webbrowser
 from keyboard_hit import KBHit
 
+py_path,_ = os.path.split( sys.executable )
+scripts_path = os.path.join( py_path, 'Scripts' )
+
+if not os.environ["PATH"].startswith(scripts_path):
+    print('Inserting into PATH:', scripts_path)
+    print('So that Spell Check Executables can be found')
+    # needed to find spell check with SPELL_RUNNER
+    os.environ["PATH"] = scripts_path + os.pathsep + os.environ["PATH"]
+
 kb = KBHit()
 
 TEST_RUNNER = "sphinx-build -b html -d _build/doctrees  . _build/html"
+SPELL_RUNNER = "sphinx-build -b spelling -d _build/doctrees  . _build/html"
+
 PATTERNS = ["*.rst",]
 TARGET_DIR = os.curdir
 
@@ -66,6 +77,7 @@ def print_instructions():
     print('='*55)
     print('  hit ESC or <ctrl>C to exit')
     print('  hit "b" to launch webbrowser')
+    print('  hit "s" to spell check (if sphinxcontrib-spelling is installed)')
     print('  hit any other key to rebuild HTML')
     
 
@@ -105,6 +117,7 @@ def main():
     
     try:
         while (True):
+            
             checksum = checksum_directory(TARGET_DIR, touch_first=False)
             if checksum != latest_checksum:
                 print( "Sphinxy detected a change and is rerunning tests with: %s"%(command) )
@@ -114,12 +127,16 @@ def main():
                 print_instructions()
                 
             time.sleep(1)
+            command = "%s %s"%(TEST_RUNNER, args)
             if kb.kbhit():
                 c = kb.getch()
                 if ord(c) == 27: # ESC
                     sys.exit()
                 elif ord(c) == ord('b'): # launch browser
                     webbrowser.open(INDEX_PAGE)
+                elif ord(c) == ord('s'): # spell check
+                    command = "%s %s"%(SPELL_RUNNER, args)
+                    latest_checksum = -1
                 else:
                     latest_checksum = -1
                     

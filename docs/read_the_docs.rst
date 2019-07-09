@@ -146,3 +146,17 @@ To solve the problem, I placed the fulltoc.py file from the ../Lib/site-packages
 
 I tried to modify my requirements.txt file to include `sphinxcontrib-fulltoc`_, but it never worked out for me.
 
+Sphinx Spell Checking
+---------------------
+
+The package `sphinxcontrib.spelling <https://pypi.org/project/sphinxcontrib.spelling/>`_
+is a spelling checker for Sphinx-based documentation. 
+
+It uses `PyEnchant <https://github.com/rfk/pyenchant>`_ to produce a report showing misspelled words. 
+Note: `PyEnchant <https://github.com/rfk/pyenchant>`_ is now unmaintained.
+
+To install and run `sphinxcontrib.spelling <https://pypi.org/project/sphinxcontrib.spelling/>`_
+see `Installation <https://sphinxcontrib-spelling.readthedocs.io/en/latest/install.html>`_
+and `Running <https://sphinxcontrib-spelling.readthedocs.io/en/latest/run.html>`_
+of the `Documentation <https://sphinxcontrib-spelling.readthedocs.io/en/latest/>`_
+
