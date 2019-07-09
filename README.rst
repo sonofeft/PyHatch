@@ -25,7 +25,7 @@ PyHatch
 
 See the Code at: `<https://github.com/sonofeft/PyHatch>`_
 
-See the Docs at: `<http://pyhatch.readthedocs.org/en/latest/>`_
+See the Docs at: `<https://pyhatch.readthedocs.io/>`_
 
 See PyPI page at:`<https://pypi.python.org/pypi/pyhatch>`_
 
