@@ -45,6 +45,7 @@ setup(
 
     description = 'PyHatch initializes files and directory structure for new python projects.',
     long_description = long_description,
+    long_description_content_type='text/x-rst',
 
     # The project's main homepage.
     url='http://pyhatch.readthedocs.org/en/latest/',
@@ -60,7 +61,6 @@ setup(
     classifiers = [
         # Common status values are: "3 - Alpha", "4 - Beta", "5 - Production/Stable"
         'Development Status :: 4 - Beta',
-
         "Operating System :: OS Independent",
         'Intended Audience :: Developers',
         "Intended Audience :: End Users/Desktop",

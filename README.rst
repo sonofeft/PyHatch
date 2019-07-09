@@ -1,18 +1,22 @@
 
 
-.. image:: https://img.shields.io/travis/sonofeft/PyHatch.svg
-        :target: https://travis-ci.org/sonofeft/PyHatch
+|Image1Link|_ |Image2Link|_ |Image3Link|_ |Image4Link|_
 
-.. image:: https://img.shields.io/pypi/v/PyHatch.svg
-    :target: https://pypi.python.org/pypi/pyhatch
-        
-.. image:: https://img.shields.io/pypi/pyversions/PyHatch.svg
-    :target: https://wiki.python.org/moin/Python2orPython3
+.. |Image1Link| image:: https://img.shields.io/travis/sonofeft/PyHatch.svg
+.. _Image1Link: https://travis-ci.org/sonofeft/PyHatch
 
-.. image:: https://img.shields.io/pypi/l/PyHatch.svg
-    :target: https://pypi.python.org/pypi/pyhatch
+.. |Image2Link| image:: https://img.shields.io/pypi/v/PyHatch.svg
+.. _Image2Link: https://pypi.python.org/pypi/pyhatch
+
+.. |Image3Link| image:: https://img.shields.io/pypi/pyversions/PyHatch.svg
+.. _Image3Link: https://wiki.python.org/moin/Python2orPython3
+
+.. |Image4Link| image:: https://img.shields.io/pypi/l/PyHatch.svg
+.. _Image4Link: https://pypi.python.org/pypi/pyhatch
+
 
 .. _internal_index:
+
 
 PyHatch
 =======
