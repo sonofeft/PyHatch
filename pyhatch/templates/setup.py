@@ -45,6 +45,7 @@ setup(
 
     description = '{{simpleDesc}}',
     long_description = long_description,
+    long_description_content_type='text/x-rst',
 
     # The project's main homepage.
     url='http://{{projName_lower}}.readthedocs.org/en/latest/',

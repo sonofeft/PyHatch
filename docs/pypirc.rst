@@ -33,7 +33,7 @@ The upload command
 
 Formerly, the distutils command ``upload`` pushed the distribution files to PyPI.
 
-Twine is now the preferred method.
+`Twine <https://pypi.org/project/twine/>`_ is now the preferred method.
 
 twine
 -----
@@ -61,6 +61,12 @@ files.  For example, the commands ::
 
     python setup.py sdist bdist_wheel
     python -m twine upload dist/*
+
+`Twine <https://pypi.org/project/twine/>`_ can also be called as::
+
+    twine upload --skip-existing dist/*
+    
+    (Using --skip-existing will skip versions already uploaded)
 
 will cause the source distribution and the Windows installer to be uploaded to
 PyPI.  Note that these will be uploaded even if they are built using an earlier
