@@ -16,10 +16,7 @@ This will execute the setup.py file and insure that its pip-specific commands ar
 
 
 # Always prefer setuptools over distutils
-try:
-    from setuptools import setup, find_packages
-except ImportError:
-    from distutils.core import setup, find_packages
+from setuptools import setup, find_packages
 
 # To use a consistent encoding
 from codecs import open

@@ -6,11 +6,25 @@ History
 GitHub Log
 ----------
 
-* Jul 09, 2019
-    - (by: sonofeft) 
+* Jul 18, 2019
+    - (by: sonofeft)
+        - Modified upload batch file to use twine
+        - Made some twine doc changes
+
+* Jul 9, 2019
+    - (by: sonofeft)
+        - Update README.rst
+        - twine is having trouble with RestructuredText in README.rst
+
+* Jul 8, 2019
+    - (by: sonofeft)
+        - Create .readthedocs.yml
+        - Added some doc links
+        - Update HISTORY.rst
         - version 0.0.19 dropped python 3.3 and 3.4 support
         - fixed Travis CI for python 3.4 and added spell check notes
         - Add Twine documentation for project upload
+        
 * Feb 09, 2019
     - (by: sonofeft) 
         - depricated register command
