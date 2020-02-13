@@ -1,0 +1,98 @@
+________tk_nosy UNITTEST RUN# 1_________
+
+{Item #1} test_save_project, 
+save_dir = .
+os.path.abspath( save_dir )= D:\2020_py_proj\PyHatch
+save_dir = D:\2020_py_proj\PyHatch
+projDir= D:\2020_py_proj\PyHatch\DocSampCase6
+codeDir= D:\2020_py_proj\PyHatch\DocSampCase6\docsampcase6
+testDir= D:\2020_py_proj\PyHatch\DocSampCase6\docsampcase6\tests
+docsDir= D:\2020_py_proj\PyHatch\DocSampCase6\docs
+examplesDir= D:\2020_py_proj\PyHatch\DocSampCase6\docsampcase6\examples
+docsStaticDir= D:\2020_py_proj\PyHatch\DocSampCase6\docs\_static
+docsTemplateDir= D:\2020_py_proj\PyHatch\DocSampCase6\docs\_templates
+
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\Module_Class.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\Class_Te_st_File.py
+TESTING make dir: D:\2020_py_proj\PyHatch\DocSampCase6
+TESTING make dir: D:\2020_py_proj\PyHatch\DocSampCase6\docsampcase6
+TESTING make dir: D:\2020_py_proj\PyHatch\DocSampCase6\docsampcase6\tests
+TESTING make dir: D:\2020_py_proj\PyHatch\DocSampCase6\docs
+TESTING make dir: D:\2020_py_proj\PyHatch\DocSampCase6\docs\_static
+TESTING make dir: D:\2020_py_proj\PyHatch\DocSampCase6\docs\_templates
+TESTING make dir: D:\2020_py_proj\PyHatch\DocSampCase6\docsampcase6\examples
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docsampcase6\main.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docsampcase6\tests\__init__.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docsampcase6\tests\test_main.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\__init__.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docsampcase6\__init__.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\_version.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docsampcase6\_version.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\setup.cfg
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\setup.cfg
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\README.rst
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\README.rst
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\HISTORY.rst
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\HISTORY.rst
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\AUTHORS.rst
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\AUTHORS.rst
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\MANIFEST.in
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\MANIFEST.in
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\setup.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\setup.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\build_local_git_history.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\build_local_git_history.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\metadata_reset.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\metadata_reset.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\UPLOAD_TO_PyPI.BAT
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\UPLOAD_TO_PyPI.BAT
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\.pypirc
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\.pypirc
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\tox_windows.ini
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\tox.ini
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\example_1.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docsampcase6\examples\example_1.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\requirements.txt
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\requirements.txt
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\.travis.yml
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\.travis.yml
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\LICENSE.txt
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\index.rst
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\index.rst
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\Makefile
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\Makefile
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\fulltoc.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\fulltoc.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\functions.rst
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\functions.rst
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\conf.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\conf.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\sphinxy.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\sphinxy.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\keyboard_hit.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\keyboard_hit.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\make.bat
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\make.bat
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\history.rst
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\history.rst
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\build_all_html.py
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\build_all_html.py
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\authors.rst
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\authors.rst
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\quickstart.rst
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\quickstart.rst
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\copyright.rst
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\copyright.rst
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\spelling_correct_wordlist.txt
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\spelling_correct_wordlist.txt
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\spell_check.bat
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\spell_check.bat
+fullname = D:\2020_py_proj\PyHatch\pyhatch\doc_templates\generic_logo.svg
+TESTING make file: D:\2020_py_proj\PyHatch\DocSampCase6\docs\_static\generic_logo.svg
+
+{Item #2} test_get_manifest_from_template, 
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\MANIFEST.in
+
+{Item #3} test_get_simpleDesc_from_template, 
+fullname = D:\2020_py_proj\PyHatch\pyhatch\templates\README.rst
+

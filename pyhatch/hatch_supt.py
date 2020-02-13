@@ -472,7 +472,7 @@ class Hatch(object):
             place_template_file( projDir, 'AUTHORS.rst' )
             place_template_file( projDir, 'MANIFEST.in' )
             place_template_file( projDir, 'setup.py' )
-            place_template_file( projDir, 'history_from_github_api.py')
+            place_template_file( projDir, 'build_local_git_history.py')
             place_template_file( projDir, 'metadata_reset.py' )
             place_template_file( projDir, 'UPLOAD_TO_PyPI.BAT' )
 

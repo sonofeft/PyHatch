@@ -10,4 +10,4 @@ Used to set version info throughout the project.
 
 ------
 """
-__version__ = '0.0.19'  # METADATA_RESET:__version__ = '<<version>>'
+__version__ = '0.1.0'  # METADATA_RESET:__version__ = '<<version>>'
